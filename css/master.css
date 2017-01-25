@@ -1,0 +1,493 @@
+body {
+  font-family: 'roboto';
+  margin: 0;
+}
+
+/* taipei background */
+body {
+  background-image: url("../img/background.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/**********************************************
+All Pages
+**********************************************/
+/***********************
+Containers
+***********************/
+.outer-content-container {
+  width: 70%;
+  min-width: 1024px;
+  background-color: rgba(240, 240, 240, 0.8);
+  box-shadow: 0 0 150px 30px black;
+}
+
+#inner-content-container {
+  width: 90%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.container-shadow {
+  background-color: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-align: left;
+  overflow: hidden;
+}
+
+.content-container {
+  padding: 10px 30px;
+  color: #222;
+}
+
+/***********************
+Content
+***********************/
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.page-heading {
+  font-size: 36px;
+}
+
+h1 {
+  font-family: 'roboto condensed';
+  font-weight: bold;
+  font-size: 30px;
+  margin: 15px 0;
+  color: #205E21;
+}
+
+h3 {
+  font-size: 16px;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.page-button {
+  cursor: pointer;
+
+  -webkit-transition: all 0.1s ease-out;
+  -moz-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+
+.page-button:hover {
+  background-color: rgba(32, 95, 33, 0.2);
+}
+
+a,
+a:focus {
+  color: #222;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #205E21;
+}
+
+.list-inline li {
+  vertical-align: middle;
+}
+
+.vertical-list li {
+  display: block;
+}
+
+/***********************
+Slideshow
+***********************/
+#my-carousel {
+  border-radius: inherit;
+  overflow: hidden;
+  z-index: 10;
+}
+
+#my-carousel .carousel-control {
+  background-image: none;
+  opacity: 0.5;
+}
+
+#my-carousel .carousel-control.right:hover {
+  background-image: linear-gradient(to right,rgba(0,0,0,0) 0,rgba(0,0,0,.5) 100%);
+  opacity: 0.8;
+}
+
+#my-carousel .carousel-control.left:hover {
+  background-image: linear-gradient(to left,rgba(0,0,0,0) 0,rgba(0,0,0,.5) 100%);
+  opacity: 0.8;
+}
+
+.carousel-caption h3 {
+  font-size: 18px;
+  /*font-weight: bolder;*/
+  color: white;
+  margin: 0;
+}
+
+.caption-container {
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 20px;
+  margin-bottom: 5px;
+}
+
+/**********************************************
+Home
+**********************************************/
+#home-events-list {
+  padding-top: 0;
+}
+
+#home-events-header {
+  padding-bottom: 0;
+  overflow: hidden;
+}
+
+/**********************************************
+About
+**********************************************/
+#mission-statement {
+  padding-left: 17px;
+}
+
+/**********************************************
+Board
+**********************************************/
+.bio-container {
+  padding: 25px 10px;
+  width: 100%;
+}
+
+.board-pic img {
+  max-width: 300px;
+  width: 100%;
+  margin: auto;
+  display: block;
+  border-radius: 5px;
+}
+
+.bio-text-outer {
+  height: 300px;
+  display: table;
+  overflow: hidden;
+}
+
+.bio-text-inner {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 10px 30px;
+}
+
+.bio-text-inner h1,
+.bio-text-inner h3,
+.bio-text-inner p {
+  margin: 0 0 12px 0;
+}
+
+.bio-text-inner p {
+  font-size: 14.5px;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+.vertical div {
+  float: none;
+}
+
+.vertical .bio-text-inner {
+  padding: 10px;
+  max-width: 600px;
+  width: 100%;
+}
+
+/**********************************************
+Events
+**********************************************/
+/***********************
+Event List
+***********************/
+.event-button h3 {
+  margin: 0;
+}
+
+.event-button {
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.event-button:hover {
+  border-color: transparent;
+}
+
+.event-button ul {
+  margin: 0;
+}
+
+.event-button li {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.event-list-name {
+  font-weight: bolder;
+  width: 200px;
+}
+
+.event-list-date {
+  font-size: 15px;
+  width: 135px;
+}
+
+.event-list-description {
+  color: #666;
+  font-size: 14px;
+  max-width: 490px;
+}
+
+.event-button a:hover .event-list-description {
+  color: #205E21;
+  opacity: 0.8;
+}
+
+.event-button .vertical-list {
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.event-button .vertical-list li {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+/***********************
+Event Details
+***********************/
+.event-contents {
+  margin: 10px 5px 0 5px;
+}
+
+.event-logistics {
+  width: 225px;
+  margin: 12px auto;
+  float: left;
+}
+
+.event-logistics ul {
+  margin: 0;
+}
+
+.event-logistics h3 {
+  padding: 10px 0;
+  margin: 0;
+}
+
+.event-logistics img {
+  width: 25px;
+  height: 25px;
+}
+
+.event-picture {
+  overflow: hidden;
+  padding: 2px 0 2px 0;
+}
+
+.event-picture img {
+  height: 200px;
+  display: block;
+  margin: auto;
+}
+
+.event-description {
+  clear: both;
+}
+
+.event-contents.vertical div {
+  float: none;
+}
+
+.event-contents.vertical .event-picture img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+/**********************************************
+Archive
+**********************************************/
+
+/**********************************************
+Contact
+**********************************************/
+.contact-info {
+  margin-left: 10px;
+}
+
+.contact-info img {
+  width: 30px;
+  height: 30px;
+}
+
+.contact-info h3 {
+  padding: 5px 0;
+  margin: 0;
+}
+
+.contact-info-text {
+  width: 80%;
+  min-width: 170px;
+}
+
+.contact-page-social-media-icons {
+  margin: 15px 0 15px 0;
+}
+
+.contact-page-social-media-icons img {
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+}
+
+.contact-page-social-media-icons img:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.facebook:hover {
+    content: url("../img/facebook.png");
+}
+
+.instagram:hover {
+  content: url("../img/instagram.png");
+}
+
+.snapchat:hover {
+  content: url("../img/snapchat.png");
+}
+
+.input-label {
+  font-weight: bolder;
+}
+
+input,
+textarea {
+  padding: 7px;
+  margin: 10px 15px 10px 0px;
+  border: none;
+  border-radius: 3px;
+  border: 1px solid rgba(32, 95, 33, 0.75);
+  color: rgba(0,0,0,0.75);
+  font-size: 16px;
+  max-width: 414px;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border: 1px solid #42C444;
+  box-shadow:  0 0 2px #42C444;
+  color: inherit;
+}
+
+textarea {
+  width: 414px;
+  max-width: 100%;
+  height: 150px;
+}
+
+#subject-input {
+  max-width: 414px;
+  width: 100% !important;
+}
+
+.form-button {
+  border-radius: 3px;
+  display: inline-flex;
+  padding: 7px 25px;
+  margin: 10px 0 15px 0px;
+  background-color: rgb(32, 95, 33);
+}
+
+.form-button h3 {
+  margin: 0;
+  color: white;
+}
+
+.form-button:hover {
+  background-color: #42C444;
+}
+
+#sign-up-error {
+  display: none;
+}
+
+#send-message-error {
+  display: none;
+}
+
+/**********************************************
+Welcome Page
+**********************************************/
+.welcome-page h1 {
+  font-size: 38px
+}
+
+.welcome-page h3 {
+  font-size: 18px;
+  color: white;
+}
+
+.welcome-page-outer-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.welcome-page-inner-container {
+  background-color: rgba(0,0,0,0.5);
+  align-self: center;
+  width: 100%;
+  padding: 20px 10px;
+  text-align: center;
+}
+
+.welcome-page .page-button {
+  background-color: transparent;
+  border: 1px solid #42C444;
+}
+
+.welcome-page .page-button h3 {
+  color: #42C444;
+
+  -webkit-transition: all 0.1s ease-out;
+  -moz-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+
+.welcome-page .page-button:hover {
+  background-color: #42C444;
+}
+
+.welcome-page .page-button:hover h3 {
+  color: white;
+}
