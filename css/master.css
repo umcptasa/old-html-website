@@ -199,7 +199,7 @@ Board
 }
 
 .bio-text-inner p {
-  font-size: 14.5px;
+  font-size: 14px;
 }
 
 .right {
@@ -215,7 +215,7 @@ Board
 }
 
 .vertical .bio-text-inner {
-  padding: 10px;
+  padding: 10px 0;
   max-width: 600px;
   width: 100%;
 }

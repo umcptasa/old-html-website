@@ -82,9 +82,8 @@ Snapchat Code Modal
 }
 
 #snapchat-code {
-  min-width: 300px;
-  max-width: 400px;
-  width: 90%;
+  max-width: 325px;
+  width: 80%;
 
   -webkit-animation-name: zoom;
   -webkit-animation-duration: 0.6s;
