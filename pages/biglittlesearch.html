@@ -24,16 +24,17 @@
   <link rel="stylesheet" href="../css/master.css">
   <link rel="stylesheet" href="../css/navbar.css">
   <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/search.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="../javascript/master.js"></script>
-  <script src="../javascript/big_search.js"></script>
+
+  <script src="../javascript/GoogleSheets.js"></script>
   <script async defer src="https://apis.google.com/js/api.js"
       onload="this.onload=function(){};handleClientLoad()"
       onreadystatechange="if (this.readyState === 'complete') this.onload()">
-    </script>
-
+  </script>
 </head>
 
 <body>
@@ -71,45 +72,6 @@
     <div class="outer-content-container">
       <div id="inner-content-container">
 
-        <div class="container-shadow" id="slideshow">
-          <div id="my-carousel" class="carousel slide" data-ride="carousel">
-
-            <ol class="carousel-indicators">
-              <li data-target="#my-carousel" data-slide-to="0" class="active"></li>
-              <li data-target="#my-carousel" data-slide-to="1"></li>
-              <li data-target="#my-carousel" data-slide-to="2"></li>
-              <li data-target="#my-carousel" data-slide-to="3"></li>
-            </ol>
-
-            <div class="carousel-inner" role="listbox">
-
-              <div class="item active">
-                <img src="../img/home slideshow 1.jpg">
-              </div>
-
-              <div class="item">
-                <img src="../img/home slideshow 2.jpg">
-              </div>
-
-              <div class="item">
-                <img src="../img/home slideshow 3.jpg">
-              </div>
-
-              <div class="item">
-                <img src="../img/home slideshow 4.jpg">
-              </div>
-            </div>
-
-            <a class="left carousel-control" href="#my-carousel" role="button" data-slide="prev">
-              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-            </a>
-            <a class="right carousel-control" href="#my-carousel" role="button" data-slide="next">
-              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-            </a>
-
-          </div>
-        </div>
-
         <div class="container-shadow">
           <div class="content-container">
             <h1 class="page-heading">BIG LITTLE</h1>
@@ -121,19 +83,28 @@
 
         <div class="container-shadow">
           <div class="content-container">
-            <h1>Love Language Quiz</h1>
+            <h1 class="page-heading">Find a big!</h1>
             <div class="divider"></div>
 
-            <h3>
-              Take <a href="lovelanguage.html">this quiz</a> to find out your love language!
-            </h3>
+            <input type="text" id="searchInput" onkeyup="myFunction()" placeholder="Search for names..">
+            <table id="searchTable">
+                <tr class="header">
+                    <th style="width:50%;">Name</th>
+                    <th style="width:30%;">Major</th>
+                    <th style="width:20%;">Year</th>
+                </tr>
+                <!--
+                <tr>
+                    <td>Alfreds Futterkiste</td>
+                    <td>Germany</td>
+                </tr>
+                -->
 
-            <h3>
-              Questions, comments or concerns? Send us a message <a href="contactus.html#send-message">here</a>!
-            </h3>
-
+            </table>
           </div>
         </div>
+
+
 
       </div>
     </div>
