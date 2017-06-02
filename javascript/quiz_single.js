@@ -18,7 +18,7 @@ var quiz = {
             "C", "A"],
         ["I sit close to someone I love", "I am complimented by someone I love for no apparent reason",
                 "E", "A"],
-        ["I get the change to just \"hang out\" with someone I love", "I unexpectedly get small gifts from someone I love",
+        ["I get the chance to just \"hang out\" with someone I love", "I unexpectedly get small gifts from someone I love",
             "B", "C"],
         ["I hear someone I love tell me, \"I'm proud of you\"", "someone I love helps me with a task",
             "A", "D"],
