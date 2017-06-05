@@ -1,6 +1,6 @@
 var ALL_GROUPS = new Map();
 var ALL_PEOPLE = new Array();
-$(document).ready(function() {
+//$(document).ready(function() {
     /*
     var allPeople = [
         new Person("Stephan", "Computer Science", "Sophomore",
@@ -11,7 +11,7 @@ $(document).ready(function() {
     fillTable(allPeople);
     //fillTableFromSheet();
     */
-});
+//});
 
 function Person(name, major, year, hometown, dorm, studentGroups, loveLanguages) {
     this.name = name;

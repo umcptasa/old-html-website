@@ -29,15 +29,15 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
-  <script async defer src="https://apis.google.com/js/api.js"
-      onload="this.onload=function(){};handleClientLoad()"
-      onreadystatechange="if (this.readyState === 'complete') this.onload()">
-  </script>
 
 
   <script src="../javascript/master.js"></script>
   <script src="../javascript/big_search.js"></script>
   <script src="../javascript/GoogleSheets.js"></script>
+  <script async defer src="https://apis.google.com/js/api.js"
+      onload="this.onload=function(){};handleClientLoad()"
+      onreadystatechange="if (this.readyState === 'complete') this.onload()">
+  </script>
 
 </head>
 
@@ -89,6 +89,9 @@
           <div class="content-container">
             <h1 class="page-heading">Find a big!</h1>
             <div class="divider"></div>
+            <button id="authorize-button" style="display: none;">Authorize</button>
+            <button id="signout-button" style="display: none;">Sign Out</button>
+
 
             <input type="text" id="searchInput" onkeyup="myFunction()" placeholder="Search for names..">
             <table id="searchTable">

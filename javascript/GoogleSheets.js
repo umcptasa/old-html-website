@@ -29,8 +29,8 @@ function initClient() {
 
         // Handle the initial sign-in state.
         updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
-        gapi.auth2.getAuthInstance().signIn();
-
+        authorizeButton.onclick = handleAuthClick;
+        signoutButton.onclick = handleSignoutClick;
     });
 }
 
@@ -41,12 +41,31 @@ function initClient() {
 function updateSigninStatus(isSignedIn) {
     if (isSignedIn) {
         alert('Signed in');
+        authorizeButton.style.display = 'none';
+        signoutButton.style.display = 'block';
         pullDataFromSheet();
         fillTable();
     } else {
         alert("Not signed in");
+        authorizeButton.style.display = 'block';
+        signoutButton.style.display = 'none';
     }
 }
+
+/**
+*  Sign in the user upon button click.
+*/
+      function handleAuthClick(event) {
+        gapi.auth2.getAuthInstance().signIn();
+      }
+
+      /**
+             *  Sign out the user upon button click.
+             */
+            function handleSignoutClick(event) {
+              gapi.auth2.getAuthInstance().signOut();
+            }
+
 
 /**
 * Print the names and majors of students in a sample spreadsheet:
