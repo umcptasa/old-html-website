@@ -1,12 +1,14 @@
+var ALL_GROUPS = new Map();
+var ALL_PEOPLE = new Array();
 $(document).ready(function() {
     var allPeople = [
         new Person("Stephan", "Computer Science", "Sophomore",
-            "North Potomac, MD", "Prince Frederick", ["ACES", "UMSO"], ["Physical Touch", "Quality Time"])
+            "North Potomac, MD", "Prince Frederick", "ACES, UMSO", "Physical Touch, Quality Time")
 
     ];
 
-    //fillTable(allPeople);
-    fillTableFromSheet();
+    fillTable(allPeople);
+    //fillTableFromSheet();
 });
 
 function Person(name, major, year, hometown, dorm, studentGroups, loveLanguages) {
@@ -15,18 +17,42 @@ function Person(name, major, year, hometown, dorm, studentGroups, loveLanguages)
     this.year = year;
     this.hometown = hometown;
     this.dorm = dorm;
-    this.studentGroups = studentGroups;
-    this.loveLanguages = loveLanguages;
+    this.studentGroupsText = studentGroups
+    this.studentGroups = parseStudentGroups(studentGroups);
+    this.loveLanguagesText = loveLanguages;
+    this.loveLanguages = loveLanguages.split(",");
 }
 
-function fillTableFromSheet() {
-    var spreadsheet = "https://docs.google.com/spreadsheets/d/1EqqgCV03NuBFQnEJTJ2iLpu5UjxG0ZIsRb8X9b20kqc/edit?usp=sharing#gid=0";
-    $("#searchTable").sheetrock({
-        url: spreadsheet,
-        query: "SELECT A, B, C, D, E ORDER BY A ASC",
-        fetchSize: 5
-    });
+function parseStudentGroups(studentGroups) {
+     var arrayGroups = studentGroups.split(",");
+
+     arrayGroups.forEach(function(group) {
+        var key = group.toUpperCase();
+        if(ALL_GROUPS.has(key)) {
+            ALL_GROUPS.set(key, ALL_GROUPS.get(key) + 1);
+        } else {
+            ALL_GROUPS.set(key, 1);
+        }
+     });
+
+     return arrayGroups;
 }
+
+function addPerson(row) {
+    var person = new Person(row[0], row[1], row[2], row[3], row[4], row[5], row[6]);
+    ALL_PEOPLE.push(person);
+}
+
+// function fillTableFromSheet() {
+//     var spreadsheet = "https://docs.google.com/spreadsheets/d/1EqqgCV03NuBFQnEJTJ2iLpu5UjxG0ZIsRb8X9b20kqc/edit?usp=sharing#gid=0";
+//     var entryTemplate = Handlebars.compile($("#entryTemplate").html());
+//     $("#searchTable").sheetrock({
+//         url: spreadsheet,
+//         query: "SELECT A, B, C, D, E ORDER BY A ASC",
+//         fetchSize: 5,
+//         rowTemplate:
+//     });
+// }
 
 
 function fillTable(allPeople) {
@@ -34,40 +60,13 @@ function fillTable(allPeople) {
 }
 
 function createEntry(person) {
-    /*
-    <div class='entry' id='PERSON_NAME'>
-        <tr>
-            <td>PERSON_NAME</td>
-            <td>PERSON_MAJOR</td>
-            <td>PERSON_YEAR</td>
-        </tr>
-        <div class='overview' id='PERSON_NAMEover'>
-            <h3> Hometown: PERSON_HOMETOWN
-                 Dorm: PERSON_DORM
-            </h3>
-        </div>
-    </div>
-    */
-    /*
-    $("#searchTable").append("<div class='entry' id='" + person.name +
-        "'><tr><td>" + person.name +
-        "</td><td>" + person.major +
-        "</td><td>" + person.year +
-        "</td></tr> <div class='overview' id='" + person.name +
-        "over'><h3>Hometown: " +
-        person.hometown + "<br>Dorm: " + person.dorm + "</h3></div></div>");
-        */
+    var entryTemplate = Handlebars.compile($("#entryTemplate").html());
 
-    $("#searchTable").append("<tr id='" + person.name + "'><td>" + person.name +
-        "</td><td>" + person.major +
-        "</td><td>" + person.year +
-        "</td></tr><tr class='overview' id='" + person.name +
-        "over'><h3>Hometown: " +
-        person.hometown + "<br>Dorm: " + person.dorm + "</h3></tr>");
+    var personHTML = entryTemplate(person);
+    $("#searchTable").append(personHTML);
 
     $("#" + person.name).click(function() {
-        $("#Stephanover").show(function() {
-            alert("CLICKWEE");
+        $("#" + person.name + "overview").show(function() {
             document.body.addEventListener('click', closeOverview, false);
         });
     });

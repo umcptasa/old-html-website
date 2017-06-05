@@ -28,17 +28,17 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sheetrock/1.1.4/dist/sheetrock.min.js"></script>
-  <script src="../javascript/master.js"></script>
-  <script src="../javascript/big_search.js"></script>
-
-  <!--
-  <script src="../javascript/GoogleSheets.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
   <script async defer src="https://apis.google.com/js/api.js"
       onload="this.onload=function(){};handleClientLoad()"
       onreadystatechange="if (this.readyState === 'complete') this.onload()">
   </script>
-  -->
+
+
+  <script src="../javascript/master.js"></script>
+  <script src="../javascript/big_search.js"></script>
+  <script src="../javascript/GoogleSheets.js"></script>
+
 </head>
 
 <body>
@@ -92,20 +92,29 @@
 
             <input type="text" id="searchInput" onkeyup="myFunction()" placeholder="Search for names..">
             <table id="searchTable">
-                <!--
                 <tr class="header">
                     <th style="width:50%;">Name</th>
                     <th style="width:30%;">Major</th>
                     <th style="width:20%;">Year</th>
                 </tr>
 
-                    <tr id='PERSON_NAME'>
-                        <td>PERSON_NAME</td>
-                        <td>PERSON_MAJOR</td>
-                        <td>PERSON_YEAR</td>
-                    </tr>
+                <script id="entryTemplate" type="text/x-handlebars-template">
+	                   <tr class='entry' id='{{name}}'>
+                           <td>{{name}}</td>
+                           <td>{{major}}</td>
+                           <td>{{year}}</td>
+                        </tr>
+                        <tr>
+                            <td class='overview' colspan=3 id='{{name}}overview'>
+                                <h3>Dorm: {{dorm}} <br>
+                                    Hometown: {{hometown}} <br>
+                                    Student Groups: {{studentGroupsTest}}
+                                    Love Languages: {{loveLanguagesText}}
+                                </h3>
+                            </td>
+                        </tr>
+                </script>
 
-                -->
                 <!--
                 <tr>
                     <td>Alfreds Futterkiste</td>

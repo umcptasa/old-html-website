@@ -23,13 +23,13 @@ function initClient() {
     discoveryDocs: DISCOVERY_DOCS,
     clientId: CLIENT_ID,
     scope: SCOPES
-}).then(function () {
-    // Listen for sign-in state changes.
-    gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
+    }).then(function () {
+        // Listen for sign-in state changes.
+        gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
 
-    // Handle the initial sign-in state.
-     updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
-          gapi.auth2.getAuthInstance().signIn();
+        // Handle the initial sign-in state.
+        updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
+        gapi.auth2.getAuthInstance().signIn();
 
     });
 }
@@ -41,7 +41,7 @@ function initClient() {
 function updateSigninStatus(isSignedIn) {
     if (isSignedIn) {
         alert('Signed in');
-        //listMajors();
+        pullDataFromSheet();
     } else {
         alert("Not signed in");
     }
@@ -51,23 +51,15 @@ function updateSigninStatus(isSignedIn) {
 * Print the names and majors of students in a sample spreadsheet:
 * https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
 */
-function listMajors() {
+function pullDataFromSheet() {
     gapi.client.sheets.spreadsheets.values.get({
-    spreadsheetId: '1Poj4X0s0KVPM_A9uheY_Vad2Z3p97Q8rXOHseWzTOns',
-    range: 'Bigs!A2:E',
-}).then(function(response) {
-    var range = response.result;
-    if (range.values.length > 0) {
-        appendPre('Name, Major:');
-        for (i = 0; i < range.values.length; i++) {
-            var row = range.values[i];
-            // Print columns A and E, which correspond to indices 0 and 4.
-            appendPre(row[0] + ', ' + row[4]);
-        }
-    } else {
-        appendPre('No data found.');
-    }
-}, function(response) {
-    appendPre('Error: ' + response.result.error.message);
+        spreadsheetId: '1EqqgCV03NuBFQnEJTJ2iLpu5UjxG0ZIsRb8X9b20kqc',
+        range: 'Bigs!A:G',
+    }).then(function(response) {
+        response.values.forEach(function(row) {
+            addPerson(row);
+        });
+    }, function(response) {
+        alert('Error: ' + response.result.error.message);
     });
 }
