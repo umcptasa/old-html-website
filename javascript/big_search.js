@@ -1,6 +1,7 @@
 var ALL_GROUPS = new Map();
 var ALL_PEOPLE = new Array();
 $(document).ready(function() {
+    /*
     var allPeople = [
         new Person("Stephan", "Computer Science", "Sophomore",
             "North Potomac, MD", "Prince Frederick", "ACES, UMSO", "Physical Touch, Quality Time")
@@ -9,6 +10,7 @@ $(document).ready(function() {
 
     fillTable(allPeople);
     //fillTableFromSheet();
+    */
 });
 
 function Person(name, major, year, hometown, dorm, studentGroups, loveLanguages) {
@@ -55,8 +57,8 @@ function addPerson(row) {
 // }
 
 
-function fillTable(allPeople) {
-    allPeople.forEach(createEntry);
+function fillTable() {
+    ALL_PEOPLE.forEach(createEntry);
 }
 
 function createEntry(person) {

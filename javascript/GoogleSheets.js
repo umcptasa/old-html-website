@@ -20,10 +20,10 @@ function handleClientLoad() {
 */
 function initClient() {
     gapi.client.init({
-    discoveryDocs: DISCOVERY_DOCS,
-    clientId: CLIENT_ID,
-    scope: SCOPES
-    }).then(function () {
+        discoveryDocs: DISCOVERY_DOCS,
+        clientId: CLIENT_ID,
+        scope: SCOPES
+    }).then(function() {
         // Listen for sign-in state changes.
         gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
 
@@ -42,6 +42,7 @@ function updateSigninStatus(isSignedIn) {
     if (isSignedIn) {
         alert('Signed in');
         pullDataFromSheet();
+        fillTable();
     } else {
         alert("Not signed in");
     }
