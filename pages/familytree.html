@@ -24,20 +24,28 @@
   <link rel="stylesheet" href="../css/master.css">
   <link rel="stylesheet" href="../css/navbar.css">
   <link rel="stylesheet" href="../css/footer.css">
-  <link rel="stylesheet" href="../css/search.css">
+  <link rel="stylesheet" href="../css/familyTree.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+  <script src="../javascript/lib/Treant.js"></script>
+  <script src="../javascript/lib/perfect-scrollbar.js"></script>
 
   <script src="../javascript/master.js"></script>
-  <script src="../javascript/big_search.js"></script>
-  <script src="../javascript/GoogleSheets.js"></script>
+  <script src="../javascript/familyTree.js"></script>
+
+
+  <!--
   <script async defer src="https://apis.google.com/js/api.js"
       onload="this.onload=function(){};handleClientLoad()"
       onreadystatechange="if (this.readyState === 'complete') this.onload()">
   </script>
+  -->
 
 </head>
 
@@ -78,54 +86,11 @@
 
         <div class="container-shadow">
           <div class="content-container">
-            <h1 class="page-heading">BIG LITTLE</h1>
+            <h1 class="page-heading">Family Tree</h1>
             <div class="divider"></div>
-            <h3>The Big/Little (哥哥姊姊/弟弟妹妹) system is one of TASA's most important bonds</h3>
-            <h3>Come find your perfect big or little!</h3>
-          </div>
-        </div>
 
-        <div class="container-shadow">
-          <div class="content-container">
-            <h1 class="page-heading">Find a big!</h1>
-            <div class="divider"></div>
-            <button id="authorize-button">Authorize</button>
-            <button id="signout-button" style="display: none;">Sign Out</button>
+            <div class='chart' id="familyTree"></div>
 
-
-            <input type="text" id="searchInput" onkeyup="myFunction()" placeholder="Search for names..">
-            <table id="searchTable">
-                <tr class="header">
-                    <th style="width:50%;">Name</th>
-                    <th style="width:30%;">Major</th>
-                    <th style="width:20%;">Year</th>
-                </tr>
-
-                <script id="entryTemplate" type="text/x-handlebars-template">
-	                   <tr class='entry' id='{{name}}'>
-                           <td>{{name}}</td>
-                           <td>{{major}}</td>
-                           <td>{{year}}</td>
-                        </tr>
-                        <tr>
-                            <td class='overview' colspan=3 id='{{name}}overview'>
-                                <h3>Dorm: {{dorm}} <br>
-                                    Hometown: {{hometown}} <br>
-                                    Student Groups: {{studentGroupsTest}}
-                                    Love Languages: {{loveLanguagesText}}
-                                </h3>
-                            </td>
-                        </tr>
-                </script>
-
-                <!--
-                <tr>
-                    <td>Alfreds Futterkiste</td>
-                    <td>Germany</td>
-                </tr>
-                -->
-
-            </table>
           </div>
         </div>
 

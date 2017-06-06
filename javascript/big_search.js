@@ -1,6 +1,15 @@
 var ALL_GROUPS = new Map();
 var ALL_PEOPLE = new Array();
-//$(document).ready(function() {
+$(document).ready(function() {
+    Tabletop.init({
+        key: 'https://docs.google.com/spreadsheets/d/1EqqgCV03NuBFQnEJTJ2iLpu5UjxG0ZIsRb8X9b20kqc/pubhtml',
+        callback: function(data, tabletop) {
+            data.forEach(addPerson);
+            fillTable();
+
+        },
+        simpleSheet: true
+    });
     /*
     var allPeople = [
         new Person("Stephan", "Computer Science", "Sophomore",
@@ -9,15 +18,14 @@ var ALL_PEOPLE = new Array();
     ];
 
     fillTable(allPeople);
-    //fillTableFromSheet();
+    //fillTableFromSheet() ;
     */
-//});
+});
 
-function Person(name, major, year, hometown, dorm, studentGroups, loveLanguages) {
+function Person(name, major, year, dorm, studentGroups, loveLanguages) {
     this.name = name;
     this.major = major;
     this.year = year;
-    this.hometown = hometown;
     this.dorm = dorm;
     this.studentGroupsText = studentGroups
     this.studentGroups = parseStudentGroups(studentGroups);
@@ -41,20 +49,9 @@ function parseStudentGroups(studentGroups) {
 }
 
 function addPerson(row) {
-    var person = new Person(row[0], row[1], row[2], row[3], row[4], row[5], row[6]);
+    var person = new Person(row.Name, row.Major, row.Year, row.Dorm, row.Groups, row.LoveLanguage);
     ALL_PEOPLE.push(person);
 }
-
-// function fillTableFromSheet() {
-//     var spreadsheet = "https://docs.google.com/spreadsheets/d/1EqqgCV03NuBFQnEJTJ2iLpu5UjxG0ZIsRb8X9b20kqc/edit?usp=sharing#gid=0";
-//     var entryTemplate = Handlebars.compile($("#entryTemplate").html());
-//     $("#searchTable").sheetrock({
-//         url: spreadsheet,
-//         query: "SELECT A, B, C, D, E ORDER BY A ASC",
-//         fetchSize: 5,
-//         rowTemplate:
-//     });
-// }
 
 
 function fillTable() {
@@ -67,12 +64,20 @@ function createEntry(person) {
     var personHTML = entryTemplate(person);
     $("#searchTable").append(personHTML);
 
-    $("#" + person.name).click(function() {
-        $("#" + person.name + "overview").show(function() {
+    /*
+    $("#searchTable").on("click", "#" + person.name, function() {
+        $("searchTable").on("click", "#" + person.name + "overview").show(function() {
             document.body.addEventListener('click', closeOverview, false);
         });
     });
+    */
+}
 
+function showOverview(id) {
+    console.log(id);
+    $(id).show(function() {
+        document.body.addEventListener('click', closeOverview, false);
+    })
 }
 
 function closeOverview(e) {
@@ -83,23 +88,17 @@ function closeOverview(e) {
 }
 
 
-function myFunction() {
+function filter() {
   // Declare variables
-  var input, filter, table, tr, td, i;
-  input = document.getElementById("searchInput");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("searchTable");
-  tr = table.getElementsByTagName("tr");
+  var input, arrayLength;
+  input = $("#searchInput").val().toUpperCase();
 
-  // Loop through all table rows, and hide those who don't match the search query
-  for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[0];
-    if (td) {
-      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    }
-  }
+  ALL_PEOPLE.forEach(function(person) {
+     if(person.name.toUpperCase().indexOf(input) > -1) {
+         $("#" + person.name).css("display", "table-row");
+     } else {
+         $("#" + person.name).css("display", "none");
+     }
+  });
+
 }

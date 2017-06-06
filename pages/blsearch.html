@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+
+  <meta name="keywords" content="University of Maryland, College Park,
+  Taiwanese American Student Associaion, Taiwan, TASA, Cultural Organization,
+  Asian Pacitic Association, Night Market, Casino Night, UMD, UMCP, Maryland">
+  <meta name="description" content="TASA at UMCP is dedicated to develop and
+  maintain Taiwanese/Taiwanese American student life and organizational
+  relations at the University of Maryland - College Park, as well as developing
+  relations with Taiwanese/Taiwanese American communities nationwide.">
+  <meta name="robots" content="index,follow">
+  <meta name="googlebot" content="index,follow">
+
+  <link rel="icon" href="../img/icon square.png">
+  <title>UMCP TASA</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/master.css">
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/search.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+
+
+  <script src="../javascript/master.js"></script>
+  <script src="../javascript/big_search.js"></script>
+
+
+  <!--
+  <script async defer src="https://apis.google.com/js/api.js"
+      onload="this.onload=function(){};handleClientLoad()"
+      onreadystatechange="if (this.readyState === 'complete') this.onload()">
+  </script>
+  -->
+
+</head>
+
+<body>
+
+
+  <div class="container-fluid" id="navbar-container">
+    <center>
+      <div class="outer-content-container">
+        <div class="navbar-header" id="navbar-header">
+          <button type="button" class="navbar-toggle" id="navbar-toggle" data-toggle="collapse" data-target="#navbar-content">
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+          </button>
+          <a href="home.html"><img id="banner" src="../img/banner.png"/></a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbar-content">
+          <ul class="nav navbar-nav" id="navbar-list">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="board.html">Board</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a id="selected" href="biglittle.html">Big/Little</a></li>
+            <li><a href="archive.html">Archive</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </center>
+  </div>
+
+
+  <center>
+    <div class="outer-content-container">
+      <div id="inner-content-container">
+
+        <div class="container-shadow">
+          <div class="content-container">
+            <h1 class="page-heading">BIG LITTLE</h1>
+            <div class="divider"></div>
+            <h3>The Big/Little (哥哥姊姊/弟弟妹妹) system is one of TASA's most important bonds</h3>
+            <h3>Come find your perfect big or little!</h3>
+          </div>
+        </div>
+
+        <div class="container-shadow">
+          <div class="content-container">
+            <h1 class="page-heading">Find a big!</h1>
+            <div class="divider"></div>
+
+            <input type="text" id="searchInput" onkeyup="filter()" placeholder="Search for names..">
+            <table id="searchTable">
+                <tr class="header">
+                    <th style="width:50%;">Name</th>
+                    <th style="width:30%;">Major</th>
+                    <th style="width:20%;">Year</th>
+                </tr>
+
+                <script id="entryTemplate" type="text/x-handlebars-template">
+	                   <tr class='entry' id='{{name}}'>
+                           <td>{{name}}</td>
+                           <td>{{major}}</td>
+                           <td>{{year}}</td>
+                        </tr>
+                        <tr>
+                            <td class='overview' colspan=3 id='{{name}}overview'>
+                                <h3>Dorm: {{dorm}} <br>
+                                    Student Groups: {{studentGroupsText}} <br>
+                                    Love Languages: {{loveLanguagesText}}
+                                </h3>
+                            </td>
+                        </tr>
+                </script>
+
+                <!--
+                <tr>
+                    <td>Alfreds Futterkiste</td>
+                    <td>Germany</td>
+                </tr>
+                -->
+
+            </table>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+  </center>
+
+
+  <div class="footer">
+    <center>
+      <div class="outer-content-container">
+
+        <div id="footer-left">
+          <a href="home.html"><img id="footer-logo" src="../img/icon.png"/></a>
+          <a class="footer-text" id="copyright-text" href="#">© UMCP Taiwanese American Student Association</a>
+        </div>
+
+        <div id="footer-right">
+          <div class="footer-social-media-icons">
+            <a target="_blank" href="https://www.facebook.com/umcptasa/"><img class="facebook" src="../img/facebook black.png"/></a>
+            <a target="_blank" href="https://www.instagram.com/umcptasa/"><img class="instagram" src="../img/instagram black.png"/></a>
+            <img id="footer-snapchat-icon" class="snapchat" src="../img/snapchat black.png"/>
+          </div>
+          <a class="footer-text" target="_blank" href="mailto:umcptasa@gmail.com">umcptasa@gmail.com</a>
+        </div>
+
+      </div>
+    </center>
+  </div>
+
+  <div id="snapchat-code-container">
+    <center><img id="snapchat-code" src="../img/snapchat code.jpg"/></center>
+  </div>
+
+
+</body>
+</html>
