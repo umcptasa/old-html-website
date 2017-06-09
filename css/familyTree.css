@@ -1,5 +1,12 @@
-#familyTree {
+
+/* Style the tab content */
+.tabcontent {
     width: 100%;
+}
+
+#families {
+    width: 100%;
+    height: auto;
 }
 
 
@@ -18,14 +25,18 @@
 .Treant > .node img {	border: none; float: left; }
 
 /* optional Container STYLES */
-.chart { height: 600px; margin: 5px; width: 900px; }
+.tabContent { height: 600px; margin: 5px; width: 900px; }
 .Treant > .node { padding: 3px; border: 1px solid #484848; border-radius: 3px; }
 .Treant > .node img { width: 100%; height: 100%; }
 
 .Treant .collapse-switch { width: 100%; height: 100%; border: none; }
-.Treant .node.collapsed { background-color: #DEF82D; }
+.Treant .node.collapsed.active { background-color: #DEF82D; }
 .Treant .node.collapsed .collapse-switch { background: none; }
 
+.inactive {
+    background-color: black;
+    color: black;
+}
 
 /******************************************************************
 * perfect-scrollbar.css

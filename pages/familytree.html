@@ -33,6 +33,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
   <script src="../javascript/lib/Treant.js"></script>
   <script src="../javascript/lib/perfect-scrollbar.js"></script>
 
@@ -89,7 +90,16 @@
             <h1 class="page-heading">Family Tree of Active Members</h1>
             <div class="divider"></div>
 
-            <div class='chart' id="familyTree"></div>
+            <div id="families">
+                <!--
+                <div id="tabs">
+                    <button class="tablinks" onclick="renderTree(event, 'Founder')">All TASA</button>
+                </div>
+            -->
+
+                <div class='chart' id="Founder"></div>
+
+
 
           </div>
         </div>
