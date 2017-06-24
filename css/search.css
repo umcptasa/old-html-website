@@ -9,19 +9,19 @@
     margin-bottom: 12px; /* Add some space below the input */
 }
 
-#searchTable {
+table {
     border-collapse: collapse; /* Collapse borders */
     width: 100%; /* Full-width */
     border: 1px solid #ddd; /* Add a grey border */
     font-size: 18px; /* Increase font-size */
 }
 
-#searchTable th, #searchTable td {
+table th, table td {
     text-align: left; /* Left-align text */
     padding: 12px; /* Add padding */
 }
 
-#searchTable tr {
+table tr {
     /* Add a bottom border to all table rows */
     border-bottom: 1px solid #ddd;
 }
@@ -30,6 +30,21 @@
     /* Add a grey background color to the table header and on hover */
     background-color: #f1f1f1;
 }
+
+h4 {
+  font-family: 'roboto condensed';
+  font-weight: bold;
+  font-size: 20px;
+  color: #205E21;
+}
+
+#filters {
+    display: none;
+    border: 0px;
+    margin-bottom: 10px;
+}
+
+
 
 .entry {
 

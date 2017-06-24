@@ -82,19 +82,45 @@
 
         <div class="container-shadow">
           <div class="content-container">
-            <h1 class="page-heading">BIG LITTLE</h1>
-            <div class="divider"></div>
-            <h3>The Big/Little (哥哥姊姊/弟弟妹妹) system is one of TASA's most important bonds</h3>
-            <h3>Come find your perfect big or little!</h3>
-          </div>
-        </div>
-
-        <div class="container-shadow">
-          <div class="content-container">
             <h1 class="page-heading">Find a big!</h1>
             <div class="divider"></div>
 
             <input type="text" id="searchInput" onkeyup="filter()" placeholder="Search for names..">
+            <div class="content-container page-button" onclick="$('#filters').toggle()">
+              <h4>Advanced Options</h4>
+            </div>
+
+            <table id='filters'>
+                <tr>
+                    <th style="width:33%;">Major</th>
+                    <th style="width:33%;">Student Groups</th>
+                    <th style="width:33%;">Love Languages</th>
+                </tr>
+
+                <tr>
+                    <td id='filterMajor'>
+                        <script id="majorTemplate" type="text/x-handlebars-template">
+                            <input id='{{id}}' type='checkbox' checked> {{name}} <br>
+                        </script>
+                    </td>
+
+                    <td id='filterGroups'>
+                        <script id="groupTemplate" type="text/x-handlebars-template">
+                            <input id='{{id}}' type='checkbox' checked> {{name}} <br>
+                        </script>
+                    </td>
+
+                    <td id='filterLoveLanguage'>
+                        <input id='words' type='checkbox' checked> Words of Affirmation <br>
+                        <input id='acts' type='checkbox' checked> Acts of Service <br>
+                        <input id='gifts' type='checkbox' checked> Receiving Gifts <br>
+                        <input id='time' type='checkbox' checked> Quality Time <br>
+                        <input id='touch' type='checkbox' checked> Physical Touch
+
+                    </td>
+                </tr>
+            </table>
+
             <table id="searchTable">
                 <tr class="header">
                     <th style="width:50%;">Name</th>
@@ -103,13 +129,13 @@
                 </tr>
 
                 <script id="entryTemplate" type="text/x-handlebars-template">
-	                   <tr class='entry' id='{{name}}'>
+	                   <tr class='entry' id='{{id}}'>
                            <td>{{name}}</td>
-                           <td>{{major}}</td>
+                           <td>{{majorText}}</td>
                            <td>{{year}}</td>
                         </tr>
                         <tr>
-                            <td class='overview' colspan=3 id='{{name}}overview'>
+                            <td class='overview' colspan=3 id='{{id}}overview'>
                                 <h3>Dorm: {{dorm}} <br>
                                     Student Groups: {{studentGroupsText}} <br>
                                     Love Languages: {{loveLanguagesText}}
