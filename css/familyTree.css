@@ -7,6 +7,7 @@
 
 /* Style the buttons inside the tab */
 .tabs button {
+
    background-color: inherit;
    float: left;
    border: none;
@@ -14,6 +15,12 @@
    cursor: pointer;
    padding: 14px 16px;
    transition: 0.3s;
+
+   text-align: center;
+   -webkit-transition: all 0.3s ease-out;
+   -moz-transition: all 0.3s ease-out;
+   -o-transition: all 0.3s ease-out;
+   transition: all 0.3s ease-out;
 }
 
 /* Change background color of buttons on hover */
@@ -25,6 +32,7 @@
 .tabs button.active {
    background-color: #ccc;
 }
+
 
 /* Style the tab content */
 .tabcontent {
@@ -38,6 +46,8 @@
     width: 100%;
     height: 100%;
 }
+
+
 
 
 /**************************************************************
