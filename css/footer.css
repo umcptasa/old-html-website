@@ -48,13 +48,11 @@ Footer Right
     float: right;
 }
 
-/**********************************************
-Footer Middle
-**********************************************/
-#footer-middle {
-  float: middle;
+#counter {
+width: 25px;
+height: 25px;
+display:inline-block;
 }
-
 /**********************************************
 Social Media Icons
 **********************************************/
