@@ -147,7 +147,7 @@ function fillGroups() {
     var groupTemplate = Handlebars.compile($("#groupTemplate").html());
 
     ALL_GROUPS.forEach(function(group) {
-        var entryHTML = groupTemplate({
+        let entryHTML = groupTemplate({
             id: group.replace(" ", "_"),
             name: group
         });

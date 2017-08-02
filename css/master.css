@@ -80,6 +80,11 @@ h3 {
   margin-bottom: 20px;
 }
 
+.two-column {
+    column-count: 2;
+
+}
+
 .page-button {
   cursor: pointer;
 

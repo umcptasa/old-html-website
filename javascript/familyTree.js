@@ -22,7 +22,7 @@ $(document).ready(function() {
             updateChildren("Founder");
 
             FAMILY_TREE.get("Founder").children.forEach(function(lineFounder) {
-                var name = lineFounder.text.name;
+                let name = lineFounder.text.name;
                 createTab(name, name.replace(" ", ""));
             });
 
@@ -57,6 +57,22 @@ $(document).ready(function() {
         simpleSheet: true
     });
 
+    $(window).resize(function() {
+      if( $(this).width() >= 740 && $("#navbar-content").attr("aria-expanded") == "true" ) {
+        $("#navbar-toggle").click();
+        $("#tabs-toggle").click();
+      }
+
+
+      adjustFooterDivFloat($(this).width());
+      adjustFooterCopyright($(this).width());
+      adjustOuterContainerWidth($(this).width());
+      adjustEventListElementOrientation($(this).width());
+      adjustEventDetailsOrientation($(this).width());
+      adjustFormWidth($(this).width());
+      adjustBoardOrientation($(this).width());
+      changeBoardLabelText($(this).width());
+    });
 });
 
 /*
@@ -125,8 +141,8 @@ function updateChildren(name) {
     }
 
     for(i = 0; i < length; i++) {
-        var child = children[i];
-        var name = child.text.name;
+        let child = children[i];
+        let name = child.text.name;
 
         updateChildren(i);
         children[i] = FAMILY_TREE.get(name);
