@@ -1,0 +1,39 @@
+#questions {
+    text-align: left;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+}
+
+#test {
+    text-align: left;
+    font-family: 'roboto condensed';
+    font-size: 22px;
+    margin: auto;
+}
+
+
+
+input[name="choices"] {
+    display: none;
+}
+
+input[name="choices"] + label {
+    font-family: 'roboto condensed';
+    display: none;
+}
+
+input[name="choices"] + label span {
+    display:inline-block;
+    position: relative;
+    margin:-2px 10px 0 0;
+    vertical-align: middle;
+}
+
+input[name="choices"]:enabled + label {
+    font-family: 'roboto condensed';
+    margin: auto;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    font-size: 20px;
+}

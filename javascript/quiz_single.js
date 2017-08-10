@@ -65,7 +65,7 @@ var quiz = {
     ],
 
     startQuiz: function() {
-        $("#test").replaceWith("<div id='test'><h3><i>It's more meaningful to me when</i></h3> <form id='questions'></form> <a class='myButton' id='next' onclick='quiz.nextQuestion()'>Next Question</a><div id='error'></div></div>");
+        $("#test").replaceWith("<div id='test'><i>It's more meaningful to me when</i> <form id='questions'></form> <a class='myButton' id='next' onclick='quiz.nextQuestion()'>Next Question</a><div id='error'></div></div>");
         $("#test").css("text-align", "left");
         $("#error").css({
             "text-align":"left",
