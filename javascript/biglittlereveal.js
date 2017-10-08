@@ -16,7 +16,7 @@ var VISIBLE = "Founder";
 */
 $(document).ready(function() {
     Tabletop.init({
-        key: '1o3UCxEcJy_GZLji1twwIAWNqnHao6jqi56Xc6fc6NEI',
+        key: '2PACX-1vTC0O2Uf4FMtgSkdU74yP1q4l1qzlpZU3nRHogl1wOTPKcxoaJGx6GYenL2-ZU1BHnQwvphLdx7s1C1',
         callback: function(data, tabletop) {
             data.forEach(addPerson);
             updateChildren("Founder");
@@ -87,9 +87,10 @@ $(document).ready(function() {
 * Add this new node to the big's children array
 */
 function addPerson(person) {
-	var big, littles, parentNode;
-    big = person.Big;
+	var big, littles, parentNode, color;
+    big = person.Big.trim();;
     littles = person.Littles.split(",");
+    color = person.Color;
 
 	if(FAMILY_TREE.has(big)) {
 		parentNode = FAMILY_TREE.get(big);
@@ -97,7 +98,7 @@ function addPerson(person) {
         if(big.charAt(0) == '(') {
             parentNode = new Node(big, "inactive");
         } else {
-            parentNode = new Node(big, "active");
+            parentNode = new Node(big, color);
         }
 		FAMILY_TREE.set(big, parentNode);
 	}
@@ -108,7 +109,7 @@ function addPerson(person) {
         if(childName.charAt(0) == '(') {
             child = new Node(childName, "inactive");
         } else {
-            child = new Node(childName, "active");
+            child = new Node(childName, color);
         }
 
         FAMILY_TREE.set(childName, child);
