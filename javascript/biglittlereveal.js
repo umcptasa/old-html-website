@@ -66,15 +66,11 @@ $(document).ready(function() {
         $("#tabs-toggle").click();
       }
 
+    });
 
-      adjustFooterDivFloat($(this).width());
-      adjustFooterCopyright($(this).width());
-      adjustOuterContainerWidth($(this).width());
-      adjustEventListElementOrientation($(this).width());
-      adjustEventDetailsOrientation($(this).width());
-      adjustFormWidth($(this).width());
-      adjustBoardOrientation($(this).width());
-      changeBoardLabelText($(this).width());
+    $(document).on("click", 'button', function() {
+        $('.active').removeClass('active');
+        $(this).addClass('active');
     });
 });
 
@@ -212,3 +208,4 @@ function renderTree(event, lineFounderNoSpace) {
     VISIBLE = lineFounderNoSpace;
     $("#" + lineFounderNoSpace).show();
 }
+

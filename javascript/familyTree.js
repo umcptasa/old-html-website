@@ -65,16 +65,11 @@ $(document).ready(function() {
         $("#navbar-toggle").click();
         $("#tabs-toggle").click();
       }
+    });
 
-
-      adjustFooterDivFloat($(this).width());
-      adjustFooterCopyright($(this).width());
-      adjustOuterContainerWidth($(this).width());
-      adjustEventListElementOrientation($(this).width());
-      adjustEventDetailsOrientation($(this).width());
-      adjustFormWidth($(this).width());
-      adjustBoardOrientation($(this).width());
-      changeBoardLabelText($(this).width());
+    $(document).on("click", 'button', function() {
+        $('.active').removeClass('active');
+        $(this).addClass('active');
     });
 });
 
