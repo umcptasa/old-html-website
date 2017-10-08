@@ -16,7 +16,7 @@ var VISIBLE = "Founder";
 */
 $(document).ready(function() {
     Tabletop.init({
-        key: '2PACX-1vTC0O2Uf4FMtgSkdU74yP1q4l1qzlpZU3nRHogl1wOTPKcxoaJGx6GYenL2-ZU1BHnQwvphLdx7s1C1',
+        key: 'https://docs.google.com/spreadsheets/d/1o3UCxEcJy_GZLji1twwIAWNqnHao6jqi56Xc6fc6NEI/edit?usp=sharing',
         callback: function(data, tabletop) {
             data.forEach(addPerson);
             updateChildren("Founder");
@@ -32,6 +32,9 @@ $(document).ready(function() {
             		container: "#Founder",
             		animateOnInit: true,
                     scrollbar:"fancy",
+                    connectors: {
+                        type: "step"
+                    },
                     siblingSeparation: 10,
                     hideRootNode: true,
             		node: {
@@ -87,6 +90,7 @@ $(document).ready(function() {
 * Add this new node to the big's children array
 */
 function addPerson(person) {
+    console.log("what");
 	var big, littles, parentNode, color;
     big = person.Big.trim();;
     littles = person.Littles.split(",");
@@ -98,7 +102,7 @@ function addPerson(person) {
         if(big.charAt(0) == '(') {
             parentNode = new Node(big, "inactive");
         } else {
-            parentNode = new Node(big, color);
+            parentNode = new Node(big, "big " + color);
         }
 		FAMILY_TREE.set(big, parentNode);
 	}
@@ -126,6 +130,7 @@ function Node(name, htmlClass) {
 	this.children = [];
 	this.HTMLid = name.replace(" ", "_");
     this.HTMLclass = htmlClass;
+    this.collapsed = true;
     //this.parent = parent;
 }
 
@@ -171,9 +176,11 @@ function createTree(lineFounder, lineFounderNoSpace) {
     var config = {
         chart: {
     		container: selector,
-    		animateOnInit: true,
+    		animateOnInit: false,
             scrollbar:"fancy",
-            connectors: "step",
+            connectors: {
+                type: "step"
+            },
             
             siblingSeparation: 10,
             hideRootNode: false,
