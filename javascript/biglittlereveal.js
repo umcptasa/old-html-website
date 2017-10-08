@@ -173,6 +173,8 @@ function createTree(lineFounder, lineFounderNoSpace) {
     		container: selector,
     		animateOnInit: true,
             scrollbar:"fancy",
+            connectors: "step",
+            
             siblingSeparation: 10,
             hideRootNode: false,
     		node: {
