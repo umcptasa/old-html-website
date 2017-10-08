@@ -68,8 +68,8 @@ $(document).ready(function() {
     });
 
     $(document).on("click", 'button', function() {
-        $('.active').removeClass('active');
-        $(this).addClass('active');
+        $('.activeTab').removeClass('activeTab');
+        $(this).addClass('activeTab');
     });
 });
 
@@ -78,7 +78,7 @@ $(document).ready(function() {
 * Row gotten from Tabletop js consists of Big column and Littles column
 * If the FAMILY_TREE map already has the big, then get that node
 * Otherwise, create one and put it into the map with name as the key
-*
+*g
 * For each of the children, trim the name so remove any spaces
 * If the child has ( as first character, represents person is inactive
 * Add the node to the map
