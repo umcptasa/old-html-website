@@ -32,6 +32,9 @@ $(document).ready(function() {
             		container: "#Founder",
             		animateOnInit: true,
                     scrollbar:"fancy",
+                    connectors: {
+                        type: "step"
+                    },
                     siblingSeparation: 10,
                     hideRootNode: true,
             		node: {
@@ -170,8 +173,11 @@ function createTree(lineFounder, lineFounderNoSpace) {
     var config = {
         chart: {
     		container: selector,
-    		animateOnInit: true,
+            animateOnInit: true,         
             scrollbar:"fancy",
+            connectors: {
+                type: "step"
+            },
             siblingSeparation: 10,
             hideRootNode: false,
     		node: {
