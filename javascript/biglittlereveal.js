@@ -90,7 +90,6 @@ $(document).ready(function() {
 * Add this new node to the big's children array
 */
 function addPerson(person) {
-    console.log("what");
 	var big, littles, parentNode, color;
     big = person.Big.trim();;
     littles = person.Littles.split(",");
