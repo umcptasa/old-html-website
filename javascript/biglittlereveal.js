@@ -69,8 +69,8 @@ $(document).ready(function() {
     });
 
     $(document).on("click", 'button', function() {
-        $('.active').removeClass('active');
-        $(this).addClass('active');
+        $('.activeTab').removeClass('activeTab');
+        $(this).addClass('activeTab');
     });
 });
 
