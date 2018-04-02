@@ -1,3 +1,10 @@
+$( document ).ready(function() {
+    $("#test").replaceWith("");
+    $("#test").append("<h3>Choose the statement that best fits what you find to be the most meaningful in a relationship. If both or neither seem to fit you, then choose the one you that is most meaningful to you the majority of the time</h3>");
+    $("#test").append("<h3>Allow 10 - 15 minutes to complete the quiz. Take your time and give each question careful thought for the best results</h3>");
+    $("#test").append("<a class='myButton' onclick='quiz.startQuiz()'>Click Here to Begin</a>");
+});
+
 var quiz = {
     pos: 0,
     lng_A: 0, lng_B: 0, lng_C: 0, lng_D: 0, lng_E: 0,

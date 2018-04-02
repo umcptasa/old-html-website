@@ -37,7 +37,7 @@ h1 {
 }
 
 /* Create an active/current tablink class */
-.tabs button.active {
+.tabs button.activeTab {
    background-color: #ccc;
 }
 

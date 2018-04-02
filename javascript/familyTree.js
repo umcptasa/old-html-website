@@ -85,44 +85,100 @@ $(document).ready(function() {
 * Add this new node to the big's children array
 */
 function addPerson(person) {
-	var big, littles, parentNode;
+	var big, littles, parentNode, dropLevel;
     big = person.Big;
     littles = person.Littles.split(",");
+    dropLevel = parseInt(person.Level);
+
 
 	if(FAMILY_TREE.has(big)) {
 		parentNode = FAMILY_TREE.get(big);
 	} else {
         if(big.charAt(0) == '(') {
-            parentNode = new Node(big, "inactive");
+            parentNode = new Node(big, "inactive", false);
         } else {
-            parentNode = new Node(big, "active");
+            parentNode = new Node(big, "active", false);
         }
 		FAMILY_TREE.set(big, parentNode);
 	}
 
-	/* Children is an array of Strings */
+    /* Children is an array of Strings */
+    var allLittles = [];
 	littles.forEach(function(c) {
         var childName = c.trim(), child;
         if(childName.charAt(0) == '(') {
-            child = new Node(childName, "inactive");
+            child = new Node(childName, "inactive", false);
         } else {
-            child = new Node(childName, "active");
+            child = new Node(childName, "active", false);
         }
 
         FAMILY_TREE.set(childName, child);
+        /*
+        var nodeToAdd = child;
+        var i = dropLevel;
+        while(i != 0) {
+            console.log(i);
+            var psuedoString = big + "psuedo" + i;
+            var psuedoNode;
 
+            if(FAMILY_TREE.has(psuedoString)) {
+                psuedoNode = FAMILY_TREE.get(psuedoString);
+            } else {
+                psuedoNode = new Node(psuedoString, "active", true);
+                FAMILY_TREE.set(psuedoString, psuedoNode);
+            }
+            
+            psuedoNode.children.push(nodeToAdd);
+            nodeToAdd = psuedoNode;
+            i--;
+        }
+        allLittles.push(child);
+        */
         parentNode.children.push(child);
-	});
+        
+    });
+    //console.log(allLittles);
+    //addPseudo(big, parentNode, dropLevel, allLittles);
+}
+
+function addPseudo(big, parentNode, dropLevel, child) {
+    var nodesToAdd = child;
+    while(dropLevel != 0) {
+        var psuedoString = big + "psuedo" + dropLevel;
+        var psuedoNode;
+
+        if(FAMILY_TREE.has(psuedoString)) {
+            psuedoNode = FAMILY_TREE.get(psuedoString);
+        } else {
+            psuedoNode = new Node(psuedoString, "active", true);
+            FAMILY_TREE.set(psuedoString, psuedoNode);
+        }
+        
+        psuedoNode.children.concat(nodesToAdd);
+        nodesToAdd = [psuedoNode];
+        dropLevel--;
+    }
+
+    parentNode.children.push(nodesToAdd);
 }
 
 /*
 * Basic data structure stored in the Map and used for the tree
 */
-function Node(name, htmlClass) {
-	this.text = {name: name};
-	this.children = [];
-	this.HTMLid = name.replace(" ", "_");
-    this.HTMLclass = htmlClass;
+function Node(name, htmlClass, psuedo) {
+    if(psuedo) {
+        //this.HTMLid = name.replace(" ", "_");
+        this.psuedo = true;
+        this.find = {name: name};
+        this.collapsable = false;
+        this.children = [];
+    } else {
+        this.text = {name: name};
+        this.find = {name: name};
+        this.children = [];
+        this.HTMLid = name.replace(" ", "_");
+        this.HTMLclass = htmlClass;
+    }
     //this.parent = parent;
 }
 
@@ -140,7 +196,7 @@ function updateChildren(name) {
 
     for(i = 0; i < length; i++) {
         let child = children[i];
-        let name = child.text.name;
+        let name = child.find.name;
 
         updateChildren(i);
         children[i] = FAMILY_TREE.get(name);
@@ -191,6 +247,7 @@ function createTree(lineFounder, lineFounderNoSpace) {
     var tree = new Treant(config, function(){
         //console.log("Tree for " + lineFounder + " loaded");
     }, $);
+    $(selector).css("margin", "auto");
 }
 
 /*

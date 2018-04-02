@@ -143,6 +143,10 @@ Slideshow
   opacity: 0.8;
 }
 
+.carousel-inner {
+    margin: auto;
+}
+
 .carousel-caption h3 {
   font-size: 18px;
   /*font-weight: bolder;*/
