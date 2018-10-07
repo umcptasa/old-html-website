@@ -14,9 +14,9 @@ var VISIBLE = "Founder";
 * Create the family tree via Treant js for the founder node
 * Hide all of the trees just created, and show only the Founder node
 */
-$(document).ready(function() {
+function initTabletop(sheetKey) {
     Tabletop.init({
-        key: 'https://docs.google.com/spreadsheets/d/1o3UCxEcJy_GZLji1twwIAWNqnHao6jqi56Xc6fc6NEI/edit?usp=sharing',
+        key: sheetKey,
         callback: function(data, tabletop) {
             data.forEach(addPerson);
             updateChildren("Founder");
@@ -72,7 +72,7 @@ $(document).ready(function() {
         $('.activeTab').removeClass('activeTab');
         $(this).addClass('activeTab');
     });
-});
+}
 
 /*
 * Adds a person to the Map
