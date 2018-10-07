@@ -31,7 +31,7 @@ function initTabletop(sheetKey) {
             	chart: {
             		container: "#Founder",
             		animateOnInit: true,
-                    scrollbar:"fancy",
+                    scrollbar: "native",
                     connectors: {
                         type: "step"
                     },
@@ -39,7 +39,7 @@ function initTabletop(sheetKey) {
                     hideRootNode: true,
             		node: {
             			collapsable: true
-            		},
+                    },
             		animation: {
             			nodeAnimation: "easeOutBounce",
             			nodeSpeed: 700,
@@ -172,7 +172,7 @@ function createTree(lineFounder, lineFounderNoSpace) {
         chart: {
     		container: selector,
     		animateOnInit: false,
-            scrollbar:"fancy",
+            scrollbar: "native",
             connectors: {
                 type: "step"
             },

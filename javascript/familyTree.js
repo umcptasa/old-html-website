@@ -31,7 +31,7 @@ $(document).ready(function() {
             	chart: {
             		container: "#Founder",
             		animateOnInit: true,
-                    scrollbar:"fancy",
+                    scrollbar: "native",
                     connectors: {
                         type: "step"
                     },
