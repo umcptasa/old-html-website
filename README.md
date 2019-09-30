@@ -34,17 +34,13 @@ pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-
     2. `RANGE_NAME`: Range of cells containing our data. Will need to change if adding people or columns. More info about ranges [here](https://developers.google.com/sheets/api/guides/concepts#a1_notation)
     3. Various indexes for the columns in the sheet
     4. `JSON_PATH`: Path where the `familytree.json` file will be generated to
-4. Run `python gen_family_json.py` 
+4. Run ```python gen_family_json.py```
 5. File should be generated!
 
 Notes: I had trouble running it on my Bash subsystem for Windows, so you might have to run it with Command Prompt
 
 ## Getting Credentials
 Since we don't want to publish our secret key for the Sheets API, you'll have to download it and copy it as `credentials.json` into [src/familytree/credentials.json](src/familytree/credentials.json). Get the file from our TASA drive. Details to generate it can be found at the Google Sheets API quickstart page: https://developers.google.com/sheets/api/quickstart/python
-
-Once you have our credential file saved
-
-You'll have to install the Google Sheets Python API
 
 # React
 React is a framework for making user interfaces. You can find the docs at https://reactjs.org/
