@@ -1,0 +1,35 @@
+{
+  "name": "Founders",
+  "attributes": {},
+  "children": [
+    {
+        "name": "Eric Zhou",
+        "attributes": {
+            "Year": 2016,
+            "Past Roles": ["Treasurer"]
+        },
+        "children": [
+        ]
+    },
+    {
+        "name": "",
+        "attributes": {
+            "Year": 
+            "Past Roles": []
+        },
+        "children": [
+        ]
+    },
+  ]
+}
+
+{
+    "name": "",
+    "attributes": {
+        "Year": 
+        "Past Roles": []
+    },
+    "children": [
+    ]
+},
+
