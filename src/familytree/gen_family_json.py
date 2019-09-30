@@ -1,11 +1,15 @@
 from __future__ import print_function
 import pickle
 import os.path
+import jsonpickle
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 
 from typing import List
+
+DEBUG = False
+JSON_PATH = '../../assets/json/familyTree.json'
 
 # If modifying these scopes, delete the file token.pickle.
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
@@ -13,6 +17,111 @@ SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 # The ID and range of a sample spreadsheet.
 SPREADSHEET_ID = '1NZM7qljnp6zryL-H3C5VzEU28Gz9cWAs-SMslCu0LCY'
 RANGE_NAME = 'People!A2:N200'
+
+# Index of columns in spreadsheet
+NAME_INDEX = 0
+YEAR_INDEX = 1
+POSITIONS_INDEX = 2
+BIG_INDEX = 3
+GENERATION_INDEX = 4
+LITTLE_INDEX = 5
+END_INDEX = 13
+
+Row = List[str]
+Generations = List[List[Row]]
+
+class Attributes:
+    year: str
+    positions: List[str]
+
+    def __init__(self, row: Row) -> None:
+        if(len(row) < POSITIONS_INDEX):
+            self.year = ""
+            self.positions = [""]
+        else:
+            self.year = row[YEAR_INDEX]
+
+            # Parse positions and strip whitespace
+            positions = row[POSITIONS_INDEX].split(',')
+            for i in range(0, len(positions)):
+                positions[i] = positions[i].strip()
+
+            self.positions = positions
+
+
+
+class Person:
+    name: str
+    attributes: Attributes
+    children: List['Person']
+
+    def __init__(self, name: str = "") -> None:
+        self.name: str = name
+        self.attributes = Attributes([])
+        self.children: List['Person'] = []
+
+    def fromRow(self, row: Row) -> 'Person':
+        if DEBUG:
+            print(row)
+        self.name = row[NAME_INDEX]
+        self.attributes = Attributes(row)
+        return self
+
+    def addChild(self, person: 'Person') -> None:
+        self.children.append(person)
+
+
+def splitGenerations(values) -> Generations:
+    data: Generations = []
+    for row in values:
+        generation: int = int(row[GENERATION_INDEX])
+
+        # If generation doesn't exist, make it!
+        while len(data) <= generation:
+            data.append([])
+
+        data[generation].append(row)
+
+    return data
+
+
+def search(generation: List[Row], name: str) -> Row:
+    # Assumes generation is sorted alphabetical order
+    # Searches with linear search for now. Binary later!
+    for row in generation:
+        if DEBUG:
+            print('~~~~Search for %s~~~~' % (name))
+            print(row)
+        if row[NAME_INDEX] == name:
+            return row
+
+    return []
+
+
+def processChild(generations: Generations, cur_gen: int, name: str) -> Person:
+    '''
+    Recursively goes through children until no more children 
+    Removes from generation once processed
+    '''
+    row: Row = search(generations[cur_gen], name)
+    person = Person().fromRow(row)
+    if DEBUG:
+        print('***************************************')
+        print('Generation: %d: %s, %s' %
+              (cur_gen, row[NAME_INDEX], row[YEAR_INDEX]))
+
+    i = LITTLE_INDEX
+    while i < len(row):
+        if(row[i] == ""):
+            if DEBUG:
+                print('No more children')
+        else:
+            child = processChild(generations, cur_gen + 1, row[i])
+            person.addChild(child)
+        i += 1
+
+    generations[cur_gen].remove(row)
+    return person
 
 
 def main():
@@ -47,27 +156,37 @@ def main():
     values = result.get('values', [])
 
     # Data object holding
-    tree = {
-        "name": "Founders",
-        "attributes": {},
-        "children": []
-    }
+    root = Person("Founder")
 
     if not values:
         print('No data found.')
     else:
         generations: List[List[str]] = splitGenerations(values)
-        i: int = 0
-        for gen in generations:
-            print('Generation %d' % (i))
-            for row in gen:
-                print('%s, %s' % (row[0], row[1]))
-            i = i + 1
-            print('###################################################')
-        #print('Name, Year:')
-        # for row in values:
-            # Print columns A and E, which correspond to indices 0 and 4.
-            #print('%s, %s' % (row[0], row[1]))
+        for row in generations[0]:
+            # Pass in the row to extract out parameters
+            founder = Person().fromRow(row)
+            if DEBUG:
+                print('- - - - - - - - - - - - - - - - - - - - - - - - -')
+                print('Founder: %s' % (row[0]))
+
+            # Loop over children. Duplicated here since we don't need to search
+            # for the founders
+            i: int = LITTLE_INDEX
+            while i < len(row):
+                if(row[i] == ""):
+                    if DEBUG:
+                        print('Empty')
+                else:
+                    child = processChild(generations, 1, row[i])
+                    founder.addChild(child)
+                i += 1
+            root.addChild(founder)
+
+    # Writing to file
+    with open(JSON_PATH, "w") as file:
+        output = jsonpickle.encode(root, unpicklable = False)
+        file.write(output)
+        print('Written to %s' % (JSON_PATH))
 
     # Alg to add
     '''
@@ -76,28 +195,6 @@ def main():
      1. Depth first adding from list then looking through next generation adding all children
      2. Remove from list once added
     '''
-
-
-class Person:
-    def __init__(self, name: str, year: int, positions: str):
-        self.name: str = name
-        self.year: int = year
-        self.positions: List[str] = positions.split(',')
-        self.children: List[Person] = []
-
-
-def splitGenerations(values) -> List[List[str]]:
-    data: List[List[str]] = []
-    for row in values:
-        generation: int = int(row[4])
-
-        # If generation doesn't exist, make it!
-        if len(data) <= generation:
-            data.append([])
-
-        data[generation].append(row)
-
-    return data
 
 
 if __name__ == '__main__':

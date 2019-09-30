@@ -4,3 +4,4 @@
 !.vscode/launch.json
 !.vscode/extensions.json
 src/familytree/credentials.json
+src/familytree/.mypy_cache/*
