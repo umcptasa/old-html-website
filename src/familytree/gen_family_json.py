@@ -14,6 +14,7 @@ SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 SPREADSHEET_ID = '1NZM7qljnp6zryL-H3C5VzEU28Gz9cWAs-SMslCu0LCY'
 RANGE_NAME = 'People!A2:N200'
 
+
 def main():
     """Shows basic usage of the Sheets API.
     Prints values from a sample spreadsheet.
@@ -45,7 +46,7 @@ def main():
                                 range=RANGE_NAME).execute()
     values = result.get('values', [])
 
-    # Data object holding 
+    # Data object holding
     tree = {
         "name": "Founders",
         "attributes": {},
@@ -55,30 +56,48 @@ def main():
     if not values:
         print('No data found.')
     else:
-        print('Name, Year:')
-        for row in values:
+        generations: List[List[str]] = splitGenerations(values)
+        i: int = 0
+        for gen in generations:
+            print('Generation %d' % (i))
+            for row in gen:
+                print('%s, %s' % (row[0], row[1]))
+            i = i + 1
+            print('###################################################')
+        #print('Name, Year:')
+        # for row in values:
             # Print columns A and E, which correspond to indices 0 and 4.
-            print('%s, %s' % (row[0], row[1]))
+            #print('%s, %s' % (row[0], row[1]))
 
-    ## Alg to add
-    ```
-        Alphabetical order names or sort by generation?
-        Ooo maybe split into lists of generations first
-        1. Depth first adding from list then looking through next generation adding all children
-        2. Remove from list once added
-    ```
+    # Alg to add
+    '''
+     Alphabetical order names or sort by generation?
+     Ooo maybe split into lists of generations first
+     1. Depth first adding from list then looking through next generation adding all children
+     2. Remove from list once added
+    '''
+
 
 class Person:
     def __init__(self, name: str, year: int, positions: str):
-        self.name = name
-        self.year = year
-        self.positions = positions.split(',')
-        self.children = []
-
-    def addChild()
+        self.name: str = name
+        self.year: int = year
+        self.positions: List[str] = positions.split(',')
+        self.children: List[Person] = []
 
 
-def parsePositions(positions: str) -> List[str]:
+def splitGenerations(values) -> List[List[str]]:
+    data: List[List[str]] = []
+    for row in values:
+        generation: int = int(row[4])
+
+        # If generation doesn't exist, make it!
+        if len(data) <= generation:
+            data.append([])
+
+        data[generation].append(row)
+
+    return data
 
 
 if __name__ == '__main__':
