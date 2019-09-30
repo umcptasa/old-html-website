@@ -35,7 +35,8 @@ pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-
     3. Various indexes for the columns in the sheet
     4. `JSON_PATH`: Path where the `familytree.json` file will be generated to
 4. Run ```python gen_family_json.py```
-5. File should be generated!
+5. If this is your first time running, you'll be redirected to a login. Sign in with TASA email
+6. File should be generated!
 
 Notes: I had trouble running it on my Bash subsystem for Windows, so you might have to run it with Command Prompt
 

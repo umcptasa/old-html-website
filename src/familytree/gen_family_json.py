@@ -7,6 +7,7 @@ from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 
 from typing import List
+from math import floor
 
 DEBUG = False
 JSON_PATH = '../../assets/json/familyTree.json'
@@ -30,6 +31,7 @@ END_INDEX = 13
 Row = List[str]
 Generations = List[List[Row]]
 
+
 class Attributes:
     year: str
     positions: List[str]
@@ -47,7 +49,6 @@ class Attributes:
                 positions[i] = positions[i].strip()
 
             self.positions = positions
-
 
 
 class Person:
@@ -72,6 +73,10 @@ class Person:
 
 
 def splitGenerations(values) -> Generations:
+    '''
+    Splits the ValueRange given by Google Sheets into generations
+    specified by the Generation column in the sheet
+    '''
     data: Generations = []
     for row in values:
         generation: int = int(row[GENERATION_INDEX])
@@ -86,23 +91,44 @@ def splitGenerations(values) -> Generations:
 
 
 def search(generation: List[Row], name: str) -> Row:
-    # Assumes generation is sorted alphabetical order
-    # Searches with linear search for now. Binary later!
-    for row in generation:
-        if DEBUG:
-            print('~~~~Search for %s~~~~' % (name))
-            print(row)
-        if row[NAME_INDEX] == name:
-            return row
+    '''
+    Assumes people in generation are sorted in alphabetical order
+    Searches with binary search
+    Returns an empty row if no one found
+    '''
+    if DEBUG:
+        print('~~~~Search for %s~~~~' % (name))
 
+    n: int = len(generation)
+    left: int = 0
+    right: int = n - 1
+    while(left <= right):
+        mid: int = floor((right + left) / 2)
+        person: Row = generation[mid]
+
+        if DEBUG:
+            print("Current: %s" % (person[NAME_INDEX]))
+
+        if person[NAME_INDEX] == name:
+            return person
+        elif person[NAME_INDEX] < name:
+            left = mid + 1
+        else:
+            right = mid - 1
+
+    if DEBUG:
+        print('No one found :(')
     return []
 
 
 def processChild(generations: Generations, cur_gen: int, name: str) -> Person:
     '''
-    Recursively goes through children until no more children 
-    Removes from generation once processed
+    Adds children depth first by recursively going through children
+    and adding their children until there are no more children in that line
+
+    Removes from generation once processed to speed up later processing
     '''
+
     row: Row = search(generations[cur_gen], name)
     person = Person().fromRow(row)
     if DEBUG:
@@ -125,9 +151,6 @@ def processChild(generations: Generations, cur_gen: int, name: str) -> Person:
 
 
 def main():
-    """Shows basic usage of the Sheets API.
-    Prints values from a sample spreadsheet.
-    """
     creds = None
     # The file token.pickle stores the user's access and refresh tokens, and is
     # created automatically when the authorization flow completes for the first
@@ -155,13 +178,15 @@ def main():
                                 range=RANGE_NAME).execute()
     values = result.get('values', [])
 
-    # Data object holding
+    # Data object holding family tree
     root = Person("Founder")
 
     if not values:
         print('No data found.')
     else:
         generations: List[List[str]] = splitGenerations(values)
+
+        # Iterate over all of the founders (generation 0)
         for row in generations[0]:
             # Pass in the row to extract out parameters
             founder = Person().fromRow(row)
@@ -184,17 +209,9 @@ def main():
 
     # Writing to file
     with open(JSON_PATH, "w") as file:
-        output = jsonpickle.encode(root, unpicklable = False)
+        output = jsonpickle.encode(root, unpicklable=False)
         file.write(output)
         print('Written to %s' % (JSON_PATH))
-
-    # Alg to add
-    '''
-     Alphabetical order names or sort by generation?
-     Ooo maybe split into lists of generations first
-     1. Depth first adding from list then looking through next generation adding all children
-     2. Remove from list once added
-    '''
 
 
 if __name__ == '__main__':
