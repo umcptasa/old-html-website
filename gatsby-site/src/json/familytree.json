@@ -1,0 +1,960 @@
+{
+  "attributes": { "positions": [""], "year": "" },
+  "children": [
+    {
+      "attributes": { "positions": [""], "year": "" },
+      "children": [
+        {
+          "attributes": { "positions": [""], "year": "2018" },
+          "children": [
+            {
+              "attributes": { "positions": ["Historian"], "year": "2020" },
+              "children": [
+                {
+                  "attributes": { "positions": ["Historian"], "year": "2021" },
+                  "children": [],
+                  "name": "Grace Lui"
+                }
+              ],
+              "name": "Grace Chen"
+            },
+            {
+              "attributes": { "positions": ["Treasurer"], "year": "2020" },
+              "children": [
+                {
+                  "attributes": { "positions": [""], "year": "2022" },
+                  "children": [],
+                  "name": "Albert Shyu"
+                },
+                {
+                  "attributes": { "positions": [""], "year": "2020" },
+                  "children": [],
+                  "name": "Kevin Beal"
+                },
+                {
+                  "attributes": {
+                    "positions": ["Video Director"],
+                    "year": "2019"
+                  },
+                  "children": [
+                    {
+                      "attributes": { "positions": [""], "year": "2022" },
+                      "children": [],
+                      "name": "Ben Lin"
+                    },
+                    {
+                      "attributes": { "positions": [""], "year": "2021" },
+                      "children": [],
+                      "name": "Claudia Choi"
+                    }
+                  ],
+                  "name": "Sam Holmberg"
+                }
+              ],
+              "name": "Maddi Chan"
+            }
+          ],
+          "name": "Jeannie Shen"
+        },
+        {
+          "attributes": { "positions": ["AASU Rep"], "year": "2018" },
+          "children": [],
+          "name": "Joy Wang"
+        },
+        {
+          "attributes": {
+            "positions": ["Co-President", "External VP"],
+            "year": "2019"
+          },
+          "children": [
+            {
+              "attributes": {
+                "positions": ["Co-President", "External VP", "AASU Rep"],
+                "year": "2020"
+              },
+              "children": [
+                {
+                  "attributes": { "positions": ["Treasurer"], "year": "2022" },
+                  "children": [],
+                  "name": "Angela Chien"
+                },
+                {
+                  "attributes": { "positions": ["ITASA Rep"], "year": "2022" },
+                  "children": [],
+                  "name": "Kyle Lao"
+                },
+                {
+                  "attributes": { "positions": ["Webmaster"], "year": "2020" },
+                  "children": [],
+                  "name": "Timothy Zhou"
+                }
+              ],
+              "name": "Aza Shiao"
+            },
+            {
+              "attributes": { "positions": [""], "year": "2020" },
+              "children": [],
+              "name": "Emily Hwang"
+            },
+            {
+              "attributes": { "positions": [""], "year": "2020" },
+              "children": [
+                {
+                  "attributes": { "positions": [""], "year": "2020" },
+                  "children": [],
+                  "name": "Tomer Krayzman"
+                }
+              ],
+              "name": "Ivy Li"
+            }
+          ],
+          "name": "Kathy Chen"
+        }
+      ],
+      "name": "Emily Chen"
+    },
+    {
+      "attributes": { "positions": ["Treasurer"], "year": "2016" },
+      "children": [
+        {
+          "attributes": { "positions": ["Culture Chair"], "year": "2019" },
+          "children": [
+            {
+              "attributes": { "positions": [""], "year": "2020" },
+              "children": [],
+              "name": "Kathy Sheng"
+            }
+          ],
+          "name": "Aileen Sun"
+        },
+        {
+          "attributes": {
+            "positions": ["Secretary", "Sports Chair"],
+            "year": "2017"
+          },
+          "children": [
+            {
+              "attributes": { "positions": [""], "year": "2020" },
+              "children": [],
+              "name": "Elli Ugot"
+            },
+            {
+              "attributes": { "positions": [""], "year": "2020" },
+              "children": [],
+              "name": "Jason Chiang"
+            }
+          ],
+          "name": "Duyhoang Dinh"
+        },
+        {
+          "attributes": {
+            "positions": ["Historian", "AASU Rep"],
+            "year": "2019"
+          },
+          "children": [
+            {
+              "attributes": { "positions": [""], "year": "2020" },
+              "children": [],
+              "name": "Annie Chen"
+            }
+          ],
+          "name": "Hannah Horng"
+        }
+      ],
+      "name": "Eric Zhou"
+    },
+    {
+      "attributes": { "positions": [""], "year": "2016" },
+      "children": [
+        {
+          "attributes": { "positions": ["Co-President"], "year": "2017" },
+          "children": [
+            {
+              "attributes": { "positions": [""], "year": "2019" },
+              "children": [
+                {
+                  "attributes": { "positions": [""], "year": "2022" },
+                  "children": [],
+                  "name": "Shawna Dougherty"
+                }
+              ],
+              "name": "Debbie Lee"
+            },
+            {
+              "attributes": { "positions": ["Internal VP"], "year": "2017" },
+              "children": [
+                {
+                  "attributes": { "positions": ["Secretary"], "year": "2020" },
+                  "children": [
+                    {
+                      "attributes": { "positions": [""], "year": "2020" },
+                      "children": [],
+                      "name": "Linda Kuo"
+                    }
+                  ],
+                  "name": "Vincent Liu"
+                }
+              ],
+              "name": "Sydney Han"
+            },
+            {
+              "attributes": { "positions": ["Webmaster"], "year": "2020" },
+              "children": [
+                {
+                  "attributes": { "positions": ["Secretary"], "year": "2020" },
+                  "children": [
+                    {
+                      "attributes": { "positions": [""], "year": "2021" },
+                      "children": [],
+                      "name": "Kenton Wong"
+                    }
+                  ],
+                  "name": "Abhishek Mishra"
+                },
+                {
+                  "attributes": { "positions": [""], "year": "2020" },
+                  "children": [
+                    {
+                      "attributes": { "positions": [""], "year": "2022" },
+                      "children": [],
+                      "name": "Jonathan Zhang"
+                    }
+                  ],
+                  "name": "Anoop Kalra"
+                },
+                {
+                  "attributes": { "positions": [""], "year": "2019" },
+                  "children": [],
+                  "name": "Jason Liu"
+                },
+                {
+                  "attributes": {
+                    "positions": ["Fundraising Chair"],
+                    "year": "2020"
+                  },
+                  "children": [],
+                  "name": "Rafee Islam"
+                }
+              ],
+              "name": "Tony Baek"
+            }
+          ],
+          "name": "Deborah Wu"
+        },
+        {
+          "attributes": { "positions": ["Historian"], "year": "2018" },
+          "children": [],
+          "name": "Tiffany Yen"
+        }
+      ],
+      "name": "Eugene Lin"
+    },
+    {
+      "attributes": { "positions": [""], "year": "" },
+      "children": [
+        {
+          "attributes": { "positions": [""], "year": "2016" },
+          "children": [],
+          "name": "Eshane Wang"
+        }
+      ],
+      "name": "James Shen"
+    },
+    {
+      "attributes": { "positions": [""], "year": "" },
+      "children": [
+        {
+          "attributes": { "positions": ["Internal VP"], "year": "2018" },
+          "children": [
+            {
+              "attributes": { "positions": [""], "year": "2019" },
+              "children": [
+                {
+                  "attributes": { "positions": [""], "year": "2020" },
+                  "children": [],
+                  "name": "Jill Huang"
+                }
+              ],
+              "name": "Cici Hsieh"
+            }
+          ],
+          "name": "Lee Wei"
+        }
+      ],
+      "name": "Jeff Huang"
+    },
+    {
+      "attributes": { "positions": [""], "year": "" },
+      "children": [
+        {
+          "attributes": { "positions": ["ECC Director"], "year": "2017" },
+          "children": [
+            {
+              "attributes": { "positions": [""], "year": "" },
+              "children": [
+                {
+                  "attributes": { "positions": [""], "year": "2018" },
+                  "children": [],
+                  "name": "Allison Chen"
+                }
+              ],
+              "name": "Irene Yang"
+            },
+            {
+              "attributes": { "positions": ["Secretary"], "year": "2020" },
+              "children": [
+                {
+                  "attributes": {
+                    "positions": ["Culture Chair"],
+                    "year": "2020"
+                  },
+                  "children": [
+                    {
+                      "attributes": {
+                        "positions": ["Historian"],
+                        "year": "2020"
+                      },
+                      "children": [
+                        {
+                          "attributes": { "positions": [""], "year": "2022" },
+                          "children": [],
+                          "name": "Howard Liao"
+                        },
+                        {
+                          "attributes": { "positions": [""], "year": "2021" },
+                          "children": [],
+                          "name": "Kevin Nguyen"
+                        }
+                      ],
+                      "name": "Amber Chen"
+                    },
+                    {
+                      "attributes": {
+                        "positions": ["Webmaster"],
+                        "year": "2022"
+                      },
+                      "children": [],
+                      "name": "Owen Luo"
+                    }
+                  ],
+                  "name": "Eva Tsai"
+                },
+                {
+                  "attributes": {
+                    "positions": ["ECC Director"],
+                    "year": "2020"
+                  },
+                  "children": [
+                    {
+                      "attributes": {
+                        "positions": ["Fundraising Chair"],
+                        "year": "2020"
+                      },
+                      "children": [
+                        {
+                          "attributes": {
+                            "positions": ["Culture Chair"],
+                            "year": "2021"
+                          },
+                          "children": [],
+                          "name": "Risa Tanji"
+                        }
+                      ],
+                      "name": "David Hsu"
+                    },
+                    {
+                      "attributes": { "positions": [""], "year": "2021" },
+                      "children": [],
+                      "name": "Josh Chen"
+                    }
+                  ],
+                  "name": "Yvonne Chen"
+                }
+              ],
+              "name": "Julia Roh"
+            }
+          ],
+          "name": "Alicia Loh"
+        }
+      ],
+      "name": "Jessica Liu"
+    },
+    {
+      "attributes": { "positions": [""], "year": "" },
+      "children": [
+        {
+          "attributes": { "positions": [""], "year": "2016" },
+          "children": [],
+          "name": "Christina Tseng"
+        },
+        {
+          "attributes": { "positions": [""], "year": "" },
+          "children": [
+            {
+              "attributes": { "positions": [""], "year": "" },
+              "children": [],
+              "name": "Bowen Liu"
+            },
+            {
+              "attributes": { "positions": [""], "year": "2017" },
+              "children": [],
+              "name": "Jasper Mok"
+            }
+          ],
+          "name": "Michelle Gu"
+        }
+      ],
+      "name": "Jonathan Chen"
+    },
+    {
+      "attributes": { "positions": [""], "year": "" },
+      "children": [
+        {
+          "attributes": { "positions": ["Public Relations"], "year": "2018" },
+          "children": [
+            {
+              "attributes": {
+                "positions": ["Public Relations", "Sports Chair"],
+                "year": "2020"
+              },
+              "children": [
+                {
+                  "attributes": {
+                    "positions": ["Videographer"],
+                    "year": "2021"
+                  },
+                  "children": [],
+                  "name": "Alex Hsieh"
+                },
+                {
+                  "attributes": { "positions": [""], "year": "2021" },
+                  "children": [],
+                  "name": "Julianna Jing"
+                },
+                {
+                  "attributes": { "positions": [""], "year": "2021" },
+                  "children": [],
+                  "name": "Kenny Wang"
+                },
+                {
+                  "attributes": { "positions": [""], "year": "2021" },
+                  "children": [
+                    {
+                      "attributes": { "positions": [""], "year": "2022" },
+                      "children": [],
+                      "name": "Amanda Zhu"
+                    },
+                    {
+                      "attributes": {
+                        "positions": ["Internal VP"],
+                        "year": "2022"
+                      },
+                      "children": [],
+                      "name": "Autumn Chiu"
+                    }
+                  ],
+                  "name": "Lynn Huang"
+                },
+                {
+                  "attributes": {
+                    "positions": ["External VP"],
+                    "year": "2022"
+                  },
+                  "children": [],
+                  "name": "Sarah Yang"
+                }
+              ],
+              "name": "Rebecca Lu"
+            },
+            {
+              "attributes": {
+                "positions": ["Public Relations", "Webmaster"],
+                "year": "2018"
+              },
+              "children": [],
+              "name": "Ryan Chang"
+            }
+          ],
+          "name": "Alex Huang"
+        },
+        {
+          "attributes": { "positions": [""], "year": "" },
+          "children": [
+            {
+              "attributes": {
+                "positions": ["Co-President", "Treasurer", "Fundraising Chair"],
+                "year": "2018"
+              },
+              "children": [
+                {
+                  "attributes": { "positions": [""], "year": "2020" },
+                  "children": [],
+                  "name": "Andrew Moy"
+                },
+                {
+                  "attributes": { "positions": [""], "year": "2020" },
+                  "children": [
+                    {
+                      "attributes": { "positions": [""], "year": "2021" },
+                      "children": [],
+                      "name": "Dan Chau"
+                    },
+                    {
+                      "attributes": { "positions": [""], "year": "2021" },
+                      "children": [],
+                      "name": "Jonah Ho"
+                    },
+                    {
+                      "attributes": { "positions": [""], "year": "2021" },
+                      "children": [],
+                      "name": "Steven Fan"
+                    }
+                  ],
+                  "name": "Andrew Yuan"
+                },
+                {
+                  "attributes": { "positions": [""], "year": "2018" },
+                  "children": [],
+                  "name": "Brian Tran"
+                },
+                {
+                  "attributes": { "positions": [""], "year": "2019" },
+                  "children": [
+                    {
+                      "attributes": { "positions": [""], "year": "2020" },
+                      "children": [
+                        {
+                          "attributes": { "positions": [""], "year": "2020" },
+                          "children": [
+                            {
+                              "attributes": {
+                                "positions": [""],
+                                "year": "2020"
+                              },
+                              "children": [],
+                              "name": "Jocelyn Lee"
+                            }
+                          ],
+                          "name": "Justin Wu"
+                        }
+                      ],
+                      "name": "Jimmy Ho"
+                    }
+                  ],
+                  "name": "Jason Chern"
+                },
+                {
+                  "attributes": { "positions": [""], "year": "2020" },
+                  "children": [
+                    {
+                      "attributes": { "positions": [""], "year": "2020" },
+                      "children": [],
+                      "name": "Forest Wang"
+                    },
+                    {
+                      "attributes": { "positions": [""], "year": "2021" },
+                      "children": [],
+                      "name": "Justin Shaw"
+                    },
+                    {
+                      "attributes": { "positions": [""], "year": "2020" },
+                      "children": [],
+                      "name": "Sam Lin"
+                    },
+                    {
+                      "attributes": { "positions": [""], "year": "2022" },
+                      "children": [],
+                      "name": "Thomas Lin"
+                    }
+                  ],
+                  "name": "Justin Liu"
+                },
+                {
+                  "attributes": {
+                    "positions": ["Co-President", "Webmaster"],
+                    "year": "2019"
+                  },
+                  "children": [
+                    {
+                      "attributes": { "positions": [""], "year": "2020" },
+                      "children": [],
+                      "name": "Alvin Zhao"
+                    },
+                    {
+                      "attributes": { "positions": [""], "year": "2022" },
+                      "children": [],
+                      "name": "Jack Liang"
+                    },
+                    {
+                      "attributes": {
+                        "positions": ["Fundraising Chair"],
+                        "year": "2020"
+                      },
+                      "children": [
+                        {
+                          "attributes": { "positions": [""], "year": "2022" },
+                          "children": [],
+                          "name": "Andrew Cheng"
+                        },
+                        {
+                          "attributes": { "positions": [""], "year": "2022" },
+                          "children": [],
+                          "name": "Chanoe Andrew Park"
+                        }
+                      ],
+                      "name": "Justin Sher"
+                    },
+                    {
+                      "attributes": {
+                        "positions": ["Sports Chair"],
+                        "year": "2020"
+                      },
+                      "children": [
+                        {
+                          "attributes": {
+                            "positions": ["Sports Chair"],
+                            "year": "2021"
+                          },
+                          "children": [],
+                          "name": "Titus Wong"
+                        }
+                      ],
+                      "name": "Kevin Cheng"
+                    },
+                    {
+                      "attributes": { "positions": [""], "year": "2020" },
+                      "children": [],
+                      "name": "Kyle Chan"
+                    },
+                    {
+                      "attributes": { "positions": [""], "year": "2020" },
+                      "children": [
+                        {
+                          "attributes": {
+                            "positions": ["Co-President", "AASU Rep"],
+                            "year": "2021"
+                          },
+                          "children": [],
+                          "name": "Angela Pan"
+                        },
+                        {
+                          "attributes": { "positions": [""], "year": "2022" },
+                          "children": [],
+                          "name": "Julian Li"
+                        },
+                        {
+                          "attributes": { "positions": [""], "year": "2022" },
+                          "children": [],
+                          "name": "Zachary Dou"
+                        }
+                      ],
+                      "name": "Mia Deng"
+                    },
+                    {
+                      "attributes": { "positions": [""], "year": "2020" },
+                      "children": [],
+                      "name": "Raymond Bao"
+                    }
+                  ],
+                  "name": "Justin Pan"
+                },
+                {
+                  "attributes": { "positions": [""], "year": "2019" },
+                  "children": [
+                    {
+                      "attributes": {
+                        "positions": ["ITASA Rep"],
+                        "year": "2020"
+                      },
+                      "children": [
+                        {
+                          "attributes": {
+                            "positions": ["Fundraising Chair"],
+                            "year": "2022"
+                          },
+                          "children": [],
+                          "name": "Karen Liu"
+                        }
+                      ],
+                      "name": "Rita Chen"
+                    }
+                  ],
+                  "name": "Michael Huang"
+                },
+                {
+                  "attributes": { "positions": ["Treasurer"], "year": "2021" },
+                  "children": [
+                    {
+                      "attributes": { "positions": [""], "year": "2022" },
+                      "children": [],
+                      "name": "Kevin Tsai"
+                    }
+                  ],
+                  "name": "Nick Chow"
+                },
+                {
+                  "attributes": {
+                    "positions": ["Co-President", "Internal VP"],
+                    "year": "2020"
+                  },
+                  "children": [
+                    {
+                      "attributes": {
+                        "positions": ["Secretary"],
+                        "year": "2022"
+                      },
+                      "children": [],
+                      "name": "Alythia Vo"
+                    },
+                    {
+                      "attributes": { "positions": [""], "year": "2021" },
+                      "children": [],
+                      "name": "Andrew Thai"
+                    },
+                    {
+                      "attributes": {
+                        "positions": ["Internal VP", "Historian"],
+                        "year": "2021"
+                      },
+                      "children": [
+                        {
+                          "attributes": { "positions": [""], "year": "2018" },
+                          "children": [],
+                          "name": "Michael Yeh"
+                        }
+                      ],
+                      "name": "Dotson Hsing"
+                    },
+                    {
+                      "attributes": { "positions": [""], "year": "2021" },
+                      "children": [],
+                      "name": "Noah Shaw"
+                    },
+                    {
+                      "attributes": { "positions": [""], "year": "2022" },
+                      "children": [],
+                      "name": "Patrick Cao"
+                    }
+                  ],
+                  "name": "Stephan Loh"
+                }
+              ],
+              "name": "Cindy Jui"
+            },
+            {
+              "attributes": { "positions": [""], "year": "2018" },
+              "children": [
+                {
+                  "attributes": { "positions": [""], "year": "2019" },
+                  "children": [
+                    {
+                      "attributes": { "positions": [""], "year": "2021" },
+                      "children": [],
+                      "name": "Charlie Hsu"
+                    },
+                    {
+                      "attributes": { "positions": [""], "year": "2020" },
+                      "children": [],
+                      "name": "Kevin Kuo"
+                    }
+                  ],
+                  "name": "Kasey Chan"
+                },
+                {
+                  "attributes": { "positions": [""], "year": "2020" },
+                  "children": [],
+                  "name": "Nathan Hsu"
+                }
+              ],
+              "name": "Emily Yang"
+            }
+          ],
+          "name": "Amanda Yu"
+        }
+      ],
+      "name": "Kevin Mao"
+    },
+    {
+      "attributes": { "positions": [""], "year": "2020" },
+      "children": [
+        {
+          "attributes": { "positions": [""], "year": "2021" },
+          "children": [],
+          "name": "Tingwei Hsu"
+        }
+      ],
+      "name": "Lily Hanrahan"
+    },
+    {
+      "attributes": { "positions": [""], "year": "" },
+      "children": [
+        {
+          "attributes": { "positions": ["External VP"], "year": "2017" },
+          "children": [
+            {
+              "attributes": {
+                "positions": ["Fundraising Chair"],
+                "year": "2020"
+              },
+              "children": [
+                {
+                  "attributes": { "positions": [""], "year": "2021" },
+                  "children": [],
+                  "name": "Emily Cheng"
+                },
+                {
+                  "attributes": { "positions": [""], "year": "2020" },
+                  "children": [],
+                  "name": "Kyle Lim"
+                }
+              ],
+              "name": "George Wu"
+            },
+            {
+              "attributes": { "positions": [""], "year": "2020" },
+              "children": [
+                {
+                  "attributes": {
+                    "positions": ["Public Relations"],
+                    "year": "2021"
+                  },
+                  "children": [],
+                  "name": "Joella Huynh"
+                }
+              ],
+              "name": "Zoey Chen"
+            }
+          ],
+          "name": "Elton Tian"
+        }
+      ],
+      "name": "Seean Kim"
+    },
+    {
+      "attributes": { "positions": [""], "year": "" },
+      "children": [
+        {
+          "attributes": { "positions": ["Co-President"], "year": "2018" },
+          "children": [
+            {
+              "attributes": { "positions": [""], "year": "2020" },
+              "children": [
+                {
+                  "attributes": { "positions": [""], "year": "2021" },
+                  "children": [],
+                  "name": "William Ju"
+                }
+              ],
+              "name": "Emily Pung"
+            },
+            {
+              "attributes": { "positions": [""], "year": "2019" },
+              "children": [],
+              "name": "Jenny Miao"
+            },
+            {
+              "attributes": {
+                "positions": ["External VP", "Fundraising Chair"],
+                "year": "2018"
+              },
+              "children": [
+                {
+                  "attributes": { "positions": ["Historian"], "year": "2020" },
+                  "children": [
+                    {
+                      "attributes": { "positions": [""], "year": "2022" },
+                      "children": [],
+                      "name": "Brian Tran"
+                    }
+                  ],
+                  "name": "Sally Feng"
+                }
+              ],
+              "name": "Peter Tran"
+            }
+          ],
+          "name": "Roy Hsu"
+        }
+      ],
+      "name": "Su Cho"
+    },
+    {
+      "attributes": { "positions": [""], "year": "2016" },
+      "children": [
+        {
+          "attributes": { "positions": ["Historian"], "year": "2017" },
+          "children": [],
+          "name": "LuHua Hung"
+        },
+        {
+          "attributes": { "positions": [""], "year": "2018" },
+          "children": [
+            {
+              "attributes": { "positions": [""], "year": "2019" },
+              "children": [
+                {
+                  "attributes": {
+                    "positions": ["Public Relations", "Historian"],
+                    "year": "2020"
+                  },
+                  "children": [
+                    {
+                      "attributes": {
+                        "positions": ["ITASA Rep"],
+                        "year": "2020"
+                      },
+                      "children": [
+                        {
+                          "attributes": { "positions": [""], "year": "2020" },
+                          "children": [],
+                          "name": "Bohan Shan"
+                        },
+                        {
+                          "attributes": { "positions": [""], "year": "2020" },
+                          "children": [
+                            {
+                              "attributes": {
+                                "positions": [""],
+                                "year": "2021"
+                              },
+                              "children": [],
+                              "name": "Claire Lee"
+                            }
+                          ],
+                          "name": "Ming Gault"
+                        }
+                      ],
+                      "name": "Albert Wang"
+                    },
+                    {
+                      "attributes": {
+                        "positions": ["Co-President"],
+                        "year": "2020"
+                      },
+                      "children": [
+                        {
+                          "attributes": {
+                            "positions": ["AASU Rep"],
+                            "year": "2022"
+                          },
+                          "children": [],
+                          "name": "Brian Pan"
+                        }
+                      ],
+                      "name": "Nathan Chen"
+                    }
+                  ],
+                  "name": "Julia Maa"
+                }
+              ],
+              "name": "Alston Kau"
+            }
+          ],
+          "name": "Steph Shao"
+        }
+      ],
+      "name": "William Chen"
+    }
+  ],
+  "name": "Founder"
+}
