@@ -3,6 +3,6 @@
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
-src/familytree/credentials.json
-src/familytree/.mypy_cache/*
-src/familytree/token.pickle
+familytree/credentials.json
+familytree/.mypy_cache/*
+familytree/token.pickle
