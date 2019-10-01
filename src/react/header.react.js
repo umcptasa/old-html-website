@@ -3,104 +3,96 @@
  *
  * @flow
  */
-import React from "react";
 
 type Props = {};
 
 function Header(props: Props) {
   return (
     <nav
-      class="navbar navbar-color-on-scroll navbar-transparent fixed-top  navbar-expand-lg "
+      className="navbar navbar-color-on-scroll navbar-transparent fixed-top  navbar-expand-lg "
       color-on-scroll="100"
       id="sectionsNav"
     >
-      <div class="container">
-        <div class="navbar-translate">
-          <a class="navbar-brand" href="../pages/home.html">
-            <div class="logo-image">
+      <div className="container">
+        <div className="navbar-translate">
+          <a className="navbar-brand" href="../pages/home.html">
+            <div className="logo-image">
               <img
                 src="../assets/img/UMCPTASA_logo_final.png"
-                class="img-fluid"
+                className="img-fluid"
               />
             </div>
           </a>
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-toggle="collapse"
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="sr-only">Toggle navigation</span>
-            <span class="navbar-toggler-icon"></span>
-            <span class="navbar-toggler-icon"></span>
-            <span class="navbar-toggler-icon"></span>
+            <span className="sr-only">Toggle navigation</span>
+            <span className="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
         </div>
-        <div class="collapse navbar-collapse">
-          <ul class="navbar-nav ml-auto">
-            <li class="dropdown nav-item"></li>
-            <li class="nav-item">
+        <div className="collapse navbar-collapse">
+          <ul className="navbar-nav ml-auto">
+            <li className="dropdown nav-item"></li>
+            <li className="nav-item">
               <a
-                class="nav-link"
+                className="nav-link"
                 href="../pages/home.html"
-                onclick="scrollToDownload()"
               >
-                <i class="material-icons">home</i> Home
+                <i className="material-icons">home</i> Home
               </a>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <a
-                class="nav-link"
+                className="nav-link"
                 href="../pages/about-us.html"
-                onclick="scrollToDownload()"
               >
-                <i class="material-icons">domain</i> About Us
+                <i className="material-icons">domain</i> About Us
               </a>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <a
-                class="nav-link"
+                className="nav-link"
                 href="../pages/board.html"
-                onclick="scrollToDownload()"
               >
-                <i class="material-icons">group</i> Board
+                <i className="material-icons">group</i> Board
               </a>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <a
-                class="nav-link"
+                className="nav-link"
                 href="../pages/events.html"
-                onclick="scrollToDownload()"
               >
-                <i class="material-icons">insert_invitation</i> Events
+                <i className="material-icons">insert_invitation</i> Events
               </a>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <a
-                class="nav-link"
+                className="nav-link"
                 href="../pages/biglittle.html"
-                onclick="scrollToDownload()"
               >
-                <i class="material-icons">wc</i> Big/Little
+                <i className="material-icons">wc</i> Big/Little
               </a>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <a
-                class="nav-link"
+                className="nav-link"
                 href="../pages/archive.html"
-                onclick="scrollToDownload()"
               >
-                <i class="material-icons">perm_media</i> Archive
+                <i className="material-icons">perm_media</i> Archive
               </a>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <a
-                class="nav-link"
+                className="nav-link"
                 href="../pages/contact-us.html"
-                onclick="scrollToDownload()"
               >
-                <i class="material-icons">forum</i> Contact Us
+                <i className="material-icons">forum</i> Contact Us
               </a>
             </li>
           </ul>
