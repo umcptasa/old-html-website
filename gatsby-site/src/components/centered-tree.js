@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react"
-import PropTypes, { node } from "prop-types"
+import PropTypes from "prop-types"
 import Tree from "react-d3-tree"
 import TreeNodeLabel from "../components/tree-node-label"
 

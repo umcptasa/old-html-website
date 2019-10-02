@@ -1,5 +1,6 @@
 import React from "react"
 import Logo from "../images/UMCPTASA_logo_final.png"
+import HeaderLink from "../components/headerLink"
 
 const Header = () => (
   <nav
@@ -33,41 +34,14 @@ const Header = () => (
       <div className="collapse navbar-collapse">
         <ul className="navbar-nav ml-auto">
           <li className="dropdown nav-item"></li>
-          <li className="nav-item">
-            <a className="nav-link" href="../pages/home.html">
-              <i className="material-icons">home</i> Home
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="../pages/about-us.html">
-              <i className="material-icons">domain</i> About Us
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="../pages/board.html">
-              <i className="material-icons">group</i> Board
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="../pages/events.html">
-              <i className="material-icons">insert_invitation</i> Events
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="../pages/biglittle.html">
-              <i className="material-icons">wc</i> Big/Little
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="../pages/archive.html">
-              <i className="material-icons">perm_media</i> Archive
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="../pages/contact-us.html">
-              <i className="material-icons">forum</i> Contact Us
-            </a>
-          </li>
+          <HeaderLink pageURL="/" iconName="home" name="Home"/>
+          <HeaderLink pageURL="/about-us/" iconName="domain" name="About Us"/>
+          <HeaderLink pageURL="/board/" iconName="group" name="Board"/>
+          <HeaderLink pageURL="/events/" iconName="insert_invitation" name="Events"/>
+          <HeaderLink pageURL="/biglittle/" iconName="wc" name="Big/Little"/>
+          <HeaderLink pageURL="/archive/" iconName="perm_media" name="Archive"/>
+          <HeaderLink pageURL="/contact-us/" iconName="forum" name="Contact Us"/>
+          
         </ul>
       </div>
     </div>
