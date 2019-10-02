@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{216:function(e,t,n){"use strict";n.r(t);var a=n(0),o=n.n(a),r=n(80),c=n(212),i=n(213);t.default=function(){return o.a.createElement(c.a,{title:"Home"},o.a.createElement(i.a,null,o.a.createElement(r.Link,{to:"/familytree/"},"Go to page 2")))}}}]);
-//# sourceMappingURL=component---src-pages-index-js-02e3a1125da2bd7d3b25.js.map
