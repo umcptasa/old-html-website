@@ -1,10 +1,4 @@
-.carousel.carousel-full-nagivation .left {
-    cursor: url(../../img/arrow-left.html), url(../../img/arrow-left-2.html), default!important
-}
 
-.carousel.carousel-full-nagivation .right {
-    cursor: url(../../img/arrow-right.html), url(../../img/arrow-right-2.html), default!important
-}
 
 .card {
     font-size: .875rem

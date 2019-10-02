@@ -6,11 +6,11 @@ from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 
-from typing import List
+from typing import List, Optional
 from math import floor
 
 DEBUG = False
-JSON_PATH = './assets/json/familyTree.json'
+JSON_PATH = '../assets/json/familyTree.json'
 
 # If modifying these scopes, delete the file token.pickle.
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
@@ -33,22 +33,28 @@ Generations = List[List[Row]]
 
 
 class Attributes:
+    id: str
     year: str
     positions: List[str]
+    description: str
 
     def __init__(self, row: Row) -> None:
         if(len(row) < POSITIONS_INDEX):
+            self.id = ""
             self.year = ""
             self.positions = [""]
+            self.description = ""
         else:
             self.year = row[YEAR_INDEX]
-
+            self.id = row[0].replace(" ", "_") + "_" + self.year
             # Parse positions and strip whitespace
             positions = row[POSITIONS_INDEX].split(',')
             for i in range(0, len(positions)):
                 positions[i] = positions[i].strip()
 
             self.positions = positions
+
+            self.description = ("Year: %s\nPositions: %s" % (self.year, row[POSITIONS_INDEX]))
 
 
 class Person:
