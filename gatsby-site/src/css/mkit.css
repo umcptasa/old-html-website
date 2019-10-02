@@ -2,6 +2,10 @@
     font-size: .875rem
 }
 
+.white-text {
+    color: white;
+}
+
 @media print {
     *,
      :after,

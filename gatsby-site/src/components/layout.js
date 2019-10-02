@@ -12,24 +12,13 @@ import { useStaticQuery, graphql } from "gatsby"
 import SEO from "./seo"
 import Header from "./header"
 import Footer from "./footer"
-import PageHeader from "./page-header"
 
-const Layout = ({ children, title, imageURL }) => {
-  /*const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)*/
-
+const Layout = ({ children, title }) => {
   return (
     <>
       <SEO title={title} />
       <Header />
-      <PageHeader title={title} imageURL={imageURL} />
+
       <main>{children}</main>
       <Footer />
     </>
@@ -39,12 +28,10 @@ const Layout = ({ children, title, imageURL }) => {
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
   title: PropTypes.string,
-  imageURL: PropTypes.string,
 }
 
 Layout.defaultProps = {
-    title: "UMCP TASA",
-    imageURL: require('../images/Taiwan.jpg')
+  title: "UMCP TASA",
 }
 
 export default Layout

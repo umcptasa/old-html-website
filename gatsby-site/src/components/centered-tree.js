@@ -5,17 +5,17 @@ import TreeNodeLabel from "../components/tree-node-label"
 
 import "../css/familytree.css"
 
-const nodeWidth = 125
+const nodeWidth = 130
 const nodeHeight = 100
 
-const nodeSvgShape = {
-  shape: "rect",
-  shapeProps: {
-    width: nodeWidth,
-    height: nodeHeight,
-    x: -nodeWidth / 2,
-    y: -nodeHeight / 2,
-  },
+const nodeEllipseShape = {
+    shape: "ellipse",
+    shapeProps: {
+        rx: nodeWidth / 2,
+        ry: nodeHeight / 2,
+        x: nodeWidth / 2,
+        y: nodeHeight / 2,
+    }
 }
 
 const CenteredTree = props => {
@@ -44,7 +44,7 @@ const CenteredTree = props => {
         nodeLabelComponent={{
             render: <TreeNodeLabel className=""/>,
             foreignObjectWrapper: {
-                x: -nodeWidth / 2,
+                x: -nodeWidth / 2 + 10,
                 y: -nodeHeight / 3,
             },
         }}
@@ -54,7 +54,7 @@ const CenteredTree = props => {
         initialDepth={1}
         pathFunc={"elbow"}
         transitionDuration={250}
-        nodeSvgShape={nodeSvgShape}
+        nodeSvgShape={nodeEllipseShape}
       />
     </div>
   )

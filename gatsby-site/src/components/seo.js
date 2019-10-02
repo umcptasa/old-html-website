@@ -78,12 +78,12 @@ function SEO({ description, lang, meta, title }) {
       <link
         rel="apple-touch-icon"
         sizes="76x76"
-        href="../assets/img/UMCPTASA_logo_final.png"
+        href={require("../images/UMCPTASA_logo_final.png")}
       />
       <link
         rel="icon"
         type="image/png"
-        href="../assets/img/UMCPTASA_logo_final.png"
+        href={require("../images/UMCPTASA_logo_final.png")}
       />
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
       <meta
