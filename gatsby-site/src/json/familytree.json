@@ -1,17 +1,20 @@
 {
-  "attributes": { "positions": [""], "year": "" },
+  "attributes": null,
   "children": [
     {
-      "attributes": { "positions": [""], "year": "" },
+      "attributes": { "graduated": "", "positions": [""] },
       "children": [
         {
-          "attributes": { "positions": [""], "year": "2018" },
+          "attributes": { "graduated": "2018", "positions": [""] },
           "children": [
             {
-              "attributes": { "positions": ["Historian"], "year": "2020" },
+              "attributes": { "graduated": "2020", "positions": ["Historian"] },
               "children": [
                 {
-                  "attributes": { "positions": ["Historian"], "year": "2021" },
+                  "attributes": {
+                    "graduated": "2021",
+                    "positions": ["Historian"]
+                  },
                   "children": [],
                   "name": "Grace Lui"
                 }
@@ -19,31 +22,31 @@
               "name": "Grace Chen"
             },
             {
-              "attributes": { "positions": ["Treasurer"], "year": "2020" },
+              "attributes": { "graduated": "2020", "positions": ["Treasurer"] },
               "children": [
                 {
-                  "attributes": { "positions": [""], "year": "2022" },
+                  "attributes": { "graduated": "2022", "positions": [""] },
                   "children": [],
                   "name": "Albert Shyu"
                 },
                 {
-                  "attributes": { "positions": [""], "year": "2020" },
+                  "attributes": { "graduated": "2020", "positions": [""] },
                   "children": [],
                   "name": "Kevin Beal"
                 },
                 {
                   "attributes": {
-                    "positions": ["Video Director"],
-                    "year": "2019"
+                    "graduated": "2019",
+                    "positions": ["Video Director"]
                   },
                   "children": [
                     {
-                      "attributes": { "positions": [""], "year": "2022" },
+                      "attributes": { "graduated": "2022", "positions": [""] },
                       "children": [],
                       "name": "Ben Lin"
                     },
                     {
-                      "attributes": { "positions": [""], "year": "2021" },
+                      "attributes": { "graduated": "2021", "positions": [""] },
                       "children": [],
                       "name": "Claudia Choi"
                     }
@@ -57,34 +60,43 @@
           "name": "Jeannie Shen"
         },
         {
-          "attributes": { "positions": ["AASU Rep"], "year": "2018" },
+          "attributes": { "graduated": "2018", "positions": ["AASU Rep"] },
           "children": [],
           "name": "Joy Wang"
         },
         {
           "attributes": {
-            "positions": ["Co-President", "External VP"],
-            "year": "2019"
+            "graduated": "2019",
+            "positions": ["Co-President", "External VP"]
           },
           "children": [
             {
               "attributes": {
-                "positions": ["Co-President", "External VP", "AASU Rep"],
-                "year": "2020"
+                "graduated": "2020",
+                "positions": ["Co-President", "External VP", "AASU Rep"]
               },
               "children": [
                 {
-                  "attributes": { "positions": ["Treasurer"], "year": "2022" },
+                  "attributes": {
+                    "graduated": "2022",
+                    "positions": ["Treasurer"]
+                  },
                   "children": [],
                   "name": "Angela Chien"
                 },
                 {
-                  "attributes": { "positions": ["ITASA Rep"], "year": "2022" },
+                  "attributes": {
+                    "graduated": "2022",
+                    "positions": ["ITASA Rep"]
+                  },
                   "children": [],
                   "name": "Kyle Lao"
                 },
                 {
-                  "attributes": { "positions": ["Webmaster"], "year": "2020" },
+                  "attributes": {
+                    "graduated": "2020",
+                    "positions": ["Webmaster"]
+                  },
                   "children": [],
                   "name": "Timothy Zhou"
                 }
@@ -92,15 +104,15 @@
               "name": "Aza Shiao"
             },
             {
-              "attributes": { "positions": [""], "year": "2020" },
+              "attributes": { "graduated": "2020", "positions": [""] },
               "children": [],
               "name": "Emily Hwang"
             },
             {
-              "attributes": { "positions": [""], "year": "2020" },
+              "attributes": { "graduated": "2020", "positions": [""] },
               "children": [
                 {
-                  "attributes": { "positions": [""], "year": "2020" },
+                  "attributes": { "graduated": "2020", "positions": [""] },
                   "children": [],
                   "name": "Tomer Krayzman"
                 }
@@ -114,13 +126,13 @@
       "name": "Emily Chen"
     },
     {
-      "attributes": { "positions": ["Treasurer"], "year": "2016" },
+      "attributes": { "graduated": "2016", "positions": ["Treasurer"] },
       "children": [
         {
-          "attributes": { "positions": ["Culture Chair"], "year": "2019" },
+          "attributes": { "graduated": "2019", "positions": ["Culture Chair"] },
           "children": [
             {
-              "attributes": { "positions": [""], "year": "2020" },
+              "attributes": { "graduated": "2020", "positions": [""] },
               "children": [],
               "name": "Kathy Sheng"
             }
@@ -129,17 +141,17 @@
         },
         {
           "attributes": {
-            "positions": ["Secretary", "Sports Chair"],
-            "year": "2017"
+            "graduated": "2017",
+            "positions": ["Secretary", "Sports Chair"]
           },
           "children": [
             {
-              "attributes": { "positions": [""], "year": "2020" },
+              "attributes": { "graduated": "2020", "positions": [""] },
               "children": [],
               "name": "Elli Ugot"
             },
             {
-              "attributes": { "positions": [""], "year": "2020" },
+              "attributes": { "graduated": "2020", "positions": [""] },
               "children": [],
               "name": "Jason Chiang"
             }
@@ -148,12 +160,12 @@
         },
         {
           "attributes": {
-            "positions": ["Historian", "AASU Rep"],
-            "year": "2019"
+            "graduated": "2019",
+            "positions": ["Historian", "AASU Rep"]
           },
           "children": [
             {
-              "attributes": { "positions": [""], "year": "2020" },
+              "attributes": { "graduated": "2020", "positions": [""] },
               "children": [],
               "name": "Annie Chen"
             }
@@ -164,16 +176,16 @@
       "name": "Eric Zhou"
     },
     {
-      "attributes": { "positions": [""], "year": "2016" },
+      "attributes": { "graduated": "2016", "positions": [""] },
       "children": [
         {
-          "attributes": { "positions": ["Co-President"], "year": "2017" },
+          "attributes": { "graduated": "2017", "positions": ["Co-President"] },
           "children": [
             {
-              "attributes": { "positions": [""], "year": "2019" },
+              "attributes": { "graduated": "2019", "positions": [""] },
               "children": [
                 {
-                  "attributes": { "positions": [""], "year": "2022" },
+                  "attributes": { "graduated": "2022", "positions": [""] },
                   "children": [],
                   "name": "Shawna Dougherty"
                 }
@@ -181,13 +193,19 @@
               "name": "Debbie Lee"
             },
             {
-              "attributes": { "positions": ["Internal VP"], "year": "2017" },
+              "attributes": {
+                "graduated": "2017",
+                "positions": ["Internal VP"]
+              },
               "children": [
                 {
-                  "attributes": { "positions": ["Secretary"], "year": "2020" },
+                  "attributes": {
+                    "graduated": "2020",
+                    "positions": ["Secretary"]
+                  },
                   "children": [
                     {
-                      "attributes": { "positions": [""], "year": "2020" },
+                      "attributes": { "graduated": "2020", "positions": [""] },
                       "children": [],
                       "name": "Linda Kuo"
                     }
@@ -198,13 +216,16 @@
               "name": "Sydney Han"
             },
             {
-              "attributes": { "positions": ["Webmaster"], "year": "2020" },
+              "attributes": { "graduated": "2020", "positions": ["Webmaster"] },
               "children": [
                 {
-                  "attributes": { "positions": ["Secretary"], "year": "2020" },
+                  "attributes": {
+                    "graduated": "2020",
+                    "positions": ["Secretary"]
+                  },
                   "children": [
                     {
-                      "attributes": { "positions": [""], "year": "2021" },
+                      "attributes": { "graduated": "2021", "positions": [""] },
                       "children": [],
                       "name": "Kenton Wong"
                     }
@@ -212,10 +233,10 @@
                   "name": "Abhishek Mishra"
                 },
                 {
-                  "attributes": { "positions": [""], "year": "2020" },
+                  "attributes": { "graduated": "2020", "positions": [""] },
                   "children": [
                     {
-                      "attributes": { "positions": [""], "year": "2022" },
+                      "attributes": { "graduated": "2022", "positions": [""] },
                       "children": [],
                       "name": "Jonathan Zhang"
                     }
@@ -223,14 +244,14 @@
                   "name": "Anoop Kalra"
                 },
                 {
-                  "attributes": { "positions": [""], "year": "2019" },
+                  "attributes": { "graduated": "2019", "positions": [""] },
                   "children": [],
                   "name": "Jason Liu"
                 },
                 {
                   "attributes": {
-                    "positions": ["Fundraising Chair"],
-                    "year": "2020"
+                    "graduated": "2020",
+                    "positions": ["Fundraising Chair"]
                   },
                   "children": [],
                   "name": "Rafee Islam"
@@ -242,7 +263,7 @@
           "name": "Deborah Wu"
         },
         {
-          "attributes": { "positions": ["Historian"], "year": "2018" },
+          "attributes": { "graduated": "2018", "positions": ["Historian"] },
           "children": [],
           "name": "Tiffany Yen"
         }
@@ -250,10 +271,10 @@
       "name": "Eugene Lin"
     },
     {
-      "attributes": { "positions": [""], "year": "" },
+      "attributes": { "graduated": "", "positions": [""] },
       "children": [
         {
-          "attributes": { "positions": [""], "year": "2016" },
+          "attributes": { "graduated": "2016", "positions": [""] },
           "children": [],
           "name": "Eshane Wang"
         }
@@ -261,16 +282,16 @@
       "name": "James Shen"
     },
     {
-      "attributes": { "positions": [""], "year": "" },
+      "attributes": { "graduated": "", "positions": [""] },
       "children": [
         {
-          "attributes": { "positions": ["Internal VP"], "year": "2018" },
+          "attributes": { "graduated": "2018", "positions": ["Internal VP"] },
           "children": [
             {
-              "attributes": { "positions": [""], "year": "2019" },
+              "attributes": { "graduated": "2019", "positions": [""] },
               "children": [
                 {
-                  "attributes": { "positions": [""], "year": "2020" },
+                  "attributes": { "graduated": "2020", "positions": [""] },
                   "children": [],
                   "name": "Jill Huang"
                 }
@@ -284,16 +305,16 @@
       "name": "Jeff Huang"
     },
     {
-      "attributes": { "positions": [""], "year": "" },
+      "attributes": { "graduated": "", "positions": [""] },
       "children": [
         {
-          "attributes": { "positions": ["ECC Director"], "year": "2017" },
+          "attributes": { "graduated": "2017", "positions": ["ECC Director"] },
           "children": [
             {
-              "attributes": { "positions": [""], "year": "" },
+              "attributes": { "graduated": "", "positions": [""] },
               "children": [
                 {
-                  "attributes": { "positions": [""], "year": "2018" },
+                  "attributes": { "graduated": "2018", "positions": [""] },
                   "children": [],
                   "name": "Allison Chen"
                 }
@@ -301,27 +322,33 @@
               "name": "Irene Yang"
             },
             {
-              "attributes": { "positions": ["Secretary"], "year": "2020" },
+              "attributes": { "graduated": "2020", "positions": ["Secretary"] },
               "children": [
                 {
                   "attributes": {
-                    "positions": ["Culture Chair"],
-                    "year": "2020"
+                    "graduated": "2020",
+                    "positions": ["Culture Chair"]
                   },
                   "children": [
                     {
                       "attributes": {
-                        "positions": ["Historian"],
-                        "year": "2020"
+                        "graduated": "2020",
+                        "positions": ["Historian"]
                       },
                       "children": [
                         {
-                          "attributes": { "positions": [""], "year": "2022" },
+                          "attributes": {
+                            "graduated": "2022",
+                            "positions": [""]
+                          },
                           "children": [],
                           "name": "Howard Liao"
                         },
                         {
-                          "attributes": { "positions": [""], "year": "2021" },
+                          "attributes": {
+                            "graduated": "2021",
+                            "positions": [""]
+                          },
                           "children": [],
                           "name": "Kevin Nguyen"
                         }
@@ -330,8 +357,8 @@
                     },
                     {
                       "attributes": {
-                        "positions": ["Webmaster"],
-                        "year": "2022"
+                        "graduated": "2022",
+                        "positions": ["Webmaster"]
                       },
                       "children": [],
                       "name": "Owen Luo"
@@ -341,20 +368,20 @@
                 },
                 {
                   "attributes": {
-                    "positions": ["ECC Director"],
-                    "year": "2020"
+                    "graduated": "2020",
+                    "positions": ["ECC Director"]
                   },
                   "children": [
                     {
                       "attributes": {
-                        "positions": ["Fundraising Chair"],
-                        "year": "2020"
+                        "graduated": "2020",
+                        "positions": ["Fundraising Chair"]
                       },
                       "children": [
                         {
                           "attributes": {
-                            "positions": ["Culture Chair"],
-                            "year": "2021"
+                            "graduated": "2021",
+                            "positions": ["Culture Chair"]
                           },
                           "children": [],
                           "name": "Risa Tanji"
@@ -363,7 +390,7 @@
                       "name": "David Hsu"
                     },
                     {
-                      "attributes": { "positions": [""], "year": "2021" },
+                      "attributes": { "graduated": "2021", "positions": [""] },
                       "children": [],
                       "name": "Josh Chen"
                     }
@@ -380,23 +407,23 @@
       "name": "Jessica Liu"
     },
     {
-      "attributes": { "positions": [""], "year": "" },
+      "attributes": { "graduated": "", "positions": [""] },
       "children": [
         {
-          "attributes": { "positions": [""], "year": "2016" },
+          "attributes": { "graduated": "2016", "positions": [""] },
           "children": [],
           "name": "Christina Tseng"
         },
         {
-          "attributes": { "positions": [""], "year": "" },
+          "attributes": { "graduated": "", "positions": [""] },
           "children": [
             {
-              "attributes": { "positions": [""], "year": "" },
+              "attributes": { "graduated": "", "positions": [""] },
               "children": [],
               "name": "Bowen Liu"
             },
             {
-              "attributes": { "positions": [""], "year": "2017" },
+              "attributes": { "graduated": "2017", "positions": [""] },
               "children": [],
               "name": "Jasper Mok"
             }
@@ -407,47 +434,50 @@
       "name": "Jonathan Chen"
     },
     {
-      "attributes": { "positions": [""], "year": "" },
+      "attributes": { "graduated": "", "positions": [""] },
       "children": [
         {
-          "attributes": { "positions": ["Public Relations"], "year": "2018" },
+          "attributes": {
+            "graduated": "2018",
+            "positions": ["Public Relations"]
+          },
           "children": [
             {
               "attributes": {
-                "positions": ["Public Relations", "Sports Chair"],
-                "year": "2020"
+                "graduated": "2020",
+                "positions": ["Public Relations", "Sports Chair"]
               },
               "children": [
                 {
                   "attributes": {
-                    "positions": ["Videographer"],
-                    "year": "2021"
+                    "graduated": "2021",
+                    "positions": ["Videographer"]
                   },
                   "children": [],
                   "name": "Alex Hsieh"
                 },
                 {
-                  "attributes": { "positions": [""], "year": "2021" },
+                  "attributes": { "graduated": "2021", "positions": [""] },
                   "children": [],
                   "name": "Julianna Jing"
                 },
                 {
-                  "attributes": { "positions": [""], "year": "2021" },
+                  "attributes": { "graduated": "2021", "positions": [""] },
                   "children": [],
                   "name": "Kenny Wang"
                 },
                 {
-                  "attributes": { "positions": [""], "year": "2021" },
+                  "attributes": { "graduated": "2021", "positions": [""] },
                   "children": [
                     {
-                      "attributes": { "positions": [""], "year": "2022" },
+                      "attributes": { "graduated": "2022", "positions": [""] },
                       "children": [],
                       "name": "Amanda Zhu"
                     },
                     {
                       "attributes": {
-                        "positions": ["Internal VP"],
-                        "year": "2022"
+                        "graduated": "2022",
+                        "positions": ["Internal VP"]
                       },
                       "children": [],
                       "name": "Autumn Chiu"
@@ -457,8 +487,8 @@
                 },
                 {
                   "attributes": {
-                    "positions": ["External VP"],
-                    "year": "2022"
+                    "graduated": "2022",
+                    "positions": ["External VP"]
                   },
                   "children": [],
                   "name": "Sarah Yang"
@@ -468,8 +498,8 @@
             },
             {
               "attributes": {
-                "positions": ["Public Relations", "Webmaster"],
-                "year": "2018"
+                "graduated": "2018",
+                "positions": ["Public Relations", "Webmaster"]
               },
               "children": [],
               "name": "Ryan Chang"
@@ -478,34 +508,34 @@
           "name": "Alex Huang"
         },
         {
-          "attributes": { "positions": [""], "year": "" },
+          "attributes": { "graduated": "", "positions": [""] },
           "children": [
             {
               "attributes": {
-                "positions": ["Co-President", "Treasurer", "Fundraising Chair"],
-                "year": "2018"
+                "graduated": "2018",
+                "positions": ["Co-President", "Treasurer", "Fundraising Chair"]
               },
               "children": [
                 {
-                  "attributes": { "positions": [""], "year": "2020" },
+                  "attributes": { "graduated": "2020", "positions": [""] },
                   "children": [],
                   "name": "Andrew Moy"
                 },
                 {
-                  "attributes": { "positions": [""], "year": "2020" },
+                  "attributes": { "graduated": "2020", "positions": [""] },
                   "children": [
                     {
-                      "attributes": { "positions": [""], "year": "2021" },
+                      "attributes": { "graduated": "2021", "positions": [""] },
                       "children": [],
                       "name": "Dan Chau"
                     },
                     {
-                      "attributes": { "positions": [""], "year": "2021" },
+                      "attributes": { "graduated": "2021", "positions": [""] },
                       "children": [],
                       "name": "Jonah Ho"
                     },
                     {
-                      "attributes": { "positions": [""], "year": "2021" },
+                      "attributes": { "graduated": "2021", "positions": [""] },
                       "children": [],
                       "name": "Steven Fan"
                     }
@@ -513,23 +543,26 @@
                   "name": "Andrew Yuan"
                 },
                 {
-                  "attributes": { "positions": [""], "year": "2018" },
+                  "attributes": { "graduated": "2018", "positions": [""] },
                   "children": [],
                   "name": "Brian Tran"
                 },
                 {
-                  "attributes": { "positions": [""], "year": "2019" },
+                  "attributes": { "graduated": "2019", "positions": [""] },
                   "children": [
                     {
-                      "attributes": { "positions": [""], "year": "2020" },
+                      "attributes": { "graduated": "2020", "positions": [""] },
                       "children": [
                         {
-                          "attributes": { "positions": [""], "year": "2020" },
+                          "attributes": {
+                            "graduated": "2020",
+                            "positions": [""]
+                          },
                           "children": [
                             {
                               "attributes": {
-                                "positions": [""],
-                                "year": "2020"
+                                "graduated": "2020",
+                                "positions": [""]
                               },
                               "children": [],
                               "name": "Jocelyn Lee"
@@ -544,25 +577,25 @@
                   "name": "Jason Chern"
                 },
                 {
-                  "attributes": { "positions": [""], "year": "2020" },
+                  "attributes": { "graduated": "2020", "positions": [""] },
                   "children": [
                     {
-                      "attributes": { "positions": [""], "year": "2020" },
+                      "attributes": { "graduated": "2020", "positions": [""] },
                       "children": [],
                       "name": "Forest Wang"
                     },
                     {
-                      "attributes": { "positions": [""], "year": "2021" },
+                      "attributes": { "graduated": "2021", "positions": [""] },
                       "children": [],
                       "name": "Justin Shaw"
                     },
                     {
-                      "attributes": { "positions": [""], "year": "2020" },
+                      "attributes": { "graduated": "2020", "positions": [""] },
                       "children": [],
                       "name": "Sam Lin"
                     },
                     {
-                      "attributes": { "positions": [""], "year": "2022" },
+                      "attributes": { "graduated": "2022", "positions": [""] },
                       "children": [],
                       "name": "Thomas Lin"
                     }
@@ -571,33 +604,39 @@
                 },
                 {
                   "attributes": {
-                    "positions": ["Co-President", "Webmaster"],
-                    "year": "2019"
+                    "graduated": "2019",
+                    "positions": ["Co-President", "Webmaster"]
                   },
                   "children": [
                     {
-                      "attributes": { "positions": [""], "year": "2020" },
+                      "attributes": { "graduated": "2020", "positions": [""] },
                       "children": [],
                       "name": "Alvin Zhao"
                     },
                     {
-                      "attributes": { "positions": [""], "year": "2022" },
+                      "attributes": { "graduated": "2022", "positions": [""] },
                       "children": [],
                       "name": "Jack Liang"
                     },
                     {
                       "attributes": {
-                        "positions": ["Fundraising Chair"],
-                        "year": "2020"
+                        "graduated": "2020",
+                        "positions": ["Fundraising Chair"]
                       },
                       "children": [
                         {
-                          "attributes": { "positions": [""], "year": "2022" },
+                          "attributes": {
+                            "graduated": "2022",
+                            "positions": [""]
+                          },
                           "children": [],
                           "name": "Andrew Cheng"
                         },
                         {
-                          "attributes": { "positions": [""], "year": "2022" },
+                          "attributes": {
+                            "graduated": "2022",
+                            "positions": [""]
+                          },
                           "children": [],
                           "name": "Chanoe Andrew Park"
                         }
@@ -606,14 +645,14 @@
                     },
                     {
                       "attributes": {
-                        "positions": ["Sports Chair"],
-                        "year": "2020"
+                        "graduated": "2020",
+                        "positions": ["Sports Chair"]
                       },
                       "children": [
                         {
                           "attributes": {
-                            "positions": ["Sports Chair"],
-                            "year": "2021"
+                            "graduated": "2021",
+                            "positions": ["Sports Chair"]
                           },
                           "children": [],
                           "name": "Titus Wong"
@@ -622,28 +661,34 @@
                       "name": "Kevin Cheng"
                     },
                     {
-                      "attributes": { "positions": [""], "year": "2020" },
+                      "attributes": { "graduated": "2020", "positions": [""] },
                       "children": [],
                       "name": "Kyle Chan"
                     },
                     {
-                      "attributes": { "positions": [""], "year": "2020" },
+                      "attributes": { "graduated": "2020", "positions": [""] },
                       "children": [
                         {
                           "attributes": {
-                            "positions": ["Co-President", "AASU Rep"],
-                            "year": "2021"
+                            "graduated": "2021",
+                            "positions": ["Co-President", "AASU Rep"]
                           },
                           "children": [],
                           "name": "Angela Pan"
                         },
                         {
-                          "attributes": { "positions": [""], "year": "2022" },
+                          "attributes": {
+                            "graduated": "2022",
+                            "positions": [""]
+                          },
                           "children": [],
                           "name": "Julian Li"
                         },
                         {
-                          "attributes": { "positions": [""], "year": "2022" },
+                          "attributes": {
+                            "graduated": "2022",
+                            "positions": [""]
+                          },
                           "children": [],
                           "name": "Zachary Dou"
                         }
@@ -651,7 +696,7 @@
                       "name": "Mia Deng"
                     },
                     {
-                      "attributes": { "positions": [""], "year": "2020" },
+                      "attributes": { "graduated": "2020", "positions": [""] },
                       "children": [],
                       "name": "Raymond Bao"
                     }
@@ -659,18 +704,18 @@
                   "name": "Justin Pan"
                 },
                 {
-                  "attributes": { "positions": [""], "year": "2019" },
+                  "attributes": { "graduated": "2019", "positions": [""] },
                   "children": [
                     {
                       "attributes": {
-                        "positions": ["ITASA Rep"],
-                        "year": "2020"
+                        "graduated": "2020",
+                        "positions": ["ITASA Rep"]
                       },
                       "children": [
                         {
                           "attributes": {
-                            "positions": ["Fundraising Chair"],
-                            "year": "2022"
+                            "graduated": "2022",
+                            "positions": ["Fundraising Chair"]
                           },
                           "children": [],
                           "name": "Karen Liu"
@@ -682,10 +727,13 @@
                   "name": "Michael Huang"
                 },
                 {
-                  "attributes": { "positions": ["Treasurer"], "year": "2021" },
+                  "attributes": {
+                    "graduated": "2021",
+                    "positions": ["Treasurer"]
+                  },
                   "children": [
                     {
-                      "attributes": { "positions": [""], "year": "2022" },
+                      "attributes": { "graduated": "2022", "positions": [""] },
                       "children": [],
                       "name": "Kevin Tsai"
                     }
@@ -694,31 +742,34 @@
                 },
                 {
                   "attributes": {
-                    "positions": ["Co-President", "Internal VP"],
-                    "year": "2020"
+                    "graduated": "2020",
+                    "positions": ["Co-President", "Internal VP"]
                   },
                   "children": [
                     {
                       "attributes": {
-                        "positions": ["Secretary"],
-                        "year": "2022"
+                        "graduated": "2022",
+                        "positions": ["Secretary"]
                       },
                       "children": [],
                       "name": "Alythia Vo"
                     },
                     {
-                      "attributes": { "positions": [""], "year": "2021" },
+                      "attributes": { "graduated": "2021", "positions": [""] },
                       "children": [],
                       "name": "Andrew Thai"
                     },
                     {
                       "attributes": {
-                        "positions": ["Internal VP", "Historian"],
-                        "year": "2021"
+                        "graduated": "2021",
+                        "positions": ["Internal VP", "Historian"]
                       },
                       "children": [
                         {
-                          "attributes": { "positions": [""], "year": "2018" },
+                          "attributes": {
+                            "graduated": "2018",
+                            "positions": [""]
+                          },
                           "children": [],
                           "name": "Michael Yeh"
                         }
@@ -726,12 +777,12 @@
                       "name": "Dotson Hsing"
                     },
                     {
-                      "attributes": { "positions": [""], "year": "2021" },
+                      "attributes": { "graduated": "2021", "positions": [""] },
                       "children": [],
                       "name": "Noah Shaw"
                     },
                     {
-                      "attributes": { "positions": [""], "year": "2022" },
+                      "attributes": { "graduated": "2022", "positions": [""] },
                       "children": [],
                       "name": "Patrick Cao"
                     }
@@ -742,18 +793,18 @@
               "name": "Cindy Jui"
             },
             {
-              "attributes": { "positions": [""], "year": "2018" },
+              "attributes": { "graduated": "2018", "positions": [""] },
               "children": [
                 {
-                  "attributes": { "positions": [""], "year": "2019" },
+                  "attributes": { "graduated": "2019", "positions": [""] },
                   "children": [
                     {
-                      "attributes": { "positions": [""], "year": "2021" },
+                      "attributes": { "graduated": "2021", "positions": [""] },
                       "children": [],
                       "name": "Charlie Hsu"
                     },
                     {
-                      "attributes": { "positions": [""], "year": "2020" },
+                      "attributes": { "graduated": "2020", "positions": [""] },
                       "children": [],
                       "name": "Kevin Kuo"
                     }
@@ -761,7 +812,7 @@
                   "name": "Kasey Chan"
                 },
                 {
-                  "attributes": { "positions": [""], "year": "2020" },
+                  "attributes": { "graduated": "2020", "positions": [""] },
                   "children": [],
                   "name": "Nathan Hsu"
                 }
@@ -775,10 +826,10 @@
       "name": "Kevin Mao"
     },
     {
-      "attributes": { "positions": [""], "year": "2020" },
+      "attributes": { "graduated": "2020", "positions": [""] },
       "children": [
         {
-          "attributes": { "positions": [""], "year": "2021" },
+          "attributes": { "graduated": "2021", "positions": [""] },
           "children": [],
           "name": "Tingwei Hsu"
         }
@@ -786,24 +837,24 @@
       "name": "Lily Hanrahan"
     },
     {
-      "attributes": { "positions": [""], "year": "" },
+      "attributes": { "graduated": "", "positions": [""] },
       "children": [
         {
-          "attributes": { "positions": ["External VP"], "year": "2017" },
+          "attributes": { "graduated": "2017", "positions": ["External VP"] },
           "children": [
             {
               "attributes": {
-                "positions": ["Fundraising Chair"],
-                "year": "2020"
+                "graduated": "2020",
+                "positions": ["Fundraising Chair"]
               },
               "children": [
                 {
-                  "attributes": { "positions": [""], "year": "2021" },
+                  "attributes": { "graduated": "2021", "positions": [""] },
                   "children": [],
                   "name": "Emily Cheng"
                 },
                 {
-                  "attributes": { "positions": [""], "year": "2020" },
+                  "attributes": { "graduated": "2020", "positions": [""] },
                   "children": [],
                   "name": "Kyle Lim"
                 }
@@ -811,12 +862,12 @@
               "name": "George Wu"
             },
             {
-              "attributes": { "positions": [""], "year": "2020" },
+              "attributes": { "graduated": "2020", "positions": [""] },
               "children": [
                 {
                   "attributes": {
-                    "positions": ["Public Relations"],
-                    "year": "2021"
+                    "graduated": "2021",
+                    "positions": ["Public Relations"]
                   },
                   "children": [],
                   "name": "Joella Huynh"
@@ -831,16 +882,16 @@
       "name": "Seean Kim"
     },
     {
-      "attributes": { "positions": [""], "year": "" },
+      "attributes": { "graduated": "", "positions": [""] },
       "children": [
         {
-          "attributes": { "positions": ["Co-President"], "year": "2018" },
+          "attributes": { "graduated": "2018", "positions": ["Co-President"] },
           "children": [
             {
-              "attributes": { "positions": [""], "year": "2020" },
+              "attributes": { "graduated": "2020", "positions": [""] },
               "children": [
                 {
-                  "attributes": { "positions": [""], "year": "2021" },
+                  "attributes": { "graduated": "2021", "positions": [""] },
                   "children": [],
                   "name": "William Ju"
                 }
@@ -848,21 +899,24 @@
               "name": "Emily Pung"
             },
             {
-              "attributes": { "positions": [""], "year": "2019" },
+              "attributes": { "graduated": "2019", "positions": [""] },
               "children": [],
               "name": "Jenny Miao"
             },
             {
               "attributes": {
-                "positions": ["External VP", "Fundraising Chair"],
-                "year": "2018"
+                "graduated": "2018",
+                "positions": ["External VP", "Fundraising Chair"]
               },
               "children": [
                 {
-                  "attributes": { "positions": ["Historian"], "year": "2020" },
+                  "attributes": {
+                    "graduated": "2020",
+                    "positions": ["Historian"]
+                  },
                   "children": [
                     {
-                      "attributes": { "positions": [""], "year": "2022" },
+                      "attributes": { "graduated": "2022", "positions": [""] },
                       "children": [],
                       "name": "Brian Tran"
                     }
@@ -879,43 +933,49 @@
       "name": "Su Cho"
     },
     {
-      "attributes": { "positions": [""], "year": "2016" },
+      "attributes": { "graduated": "2016", "positions": [""] },
       "children": [
         {
-          "attributes": { "positions": ["Historian"], "year": "2017" },
+          "attributes": { "graduated": "2017", "positions": ["Historian"] },
           "children": [],
           "name": "LuHua Hung"
         },
         {
-          "attributes": { "positions": [""], "year": "2018" },
+          "attributes": { "graduated": "2018", "positions": [""] },
           "children": [
             {
-              "attributes": { "positions": [""], "year": "2019" },
+              "attributes": { "graduated": "2019", "positions": [""] },
               "children": [
                 {
                   "attributes": {
-                    "positions": ["Public Relations", "Historian"],
-                    "year": "2020"
+                    "graduated": "2020",
+                    "positions": ["Public Relations", "Historian"]
                   },
                   "children": [
                     {
                       "attributes": {
-                        "positions": ["ITASA Rep"],
-                        "year": "2020"
+                        "graduated": "2020",
+                        "positions": ["ITASA Rep"]
                       },
                       "children": [
                         {
-                          "attributes": { "positions": [""], "year": "2020" },
+                          "attributes": {
+                            "graduated": "2020",
+                            "positions": [""]
+                          },
                           "children": [],
                           "name": "Bohan Shan"
                         },
                         {
-                          "attributes": { "positions": [""], "year": "2020" },
+                          "attributes": {
+                            "graduated": "2020",
+                            "positions": [""]
+                          },
                           "children": [
                             {
                               "attributes": {
-                                "positions": [""],
-                                "year": "2021"
+                                "graduated": "2021",
+                                "positions": [""]
                               },
                               "children": [],
                               "name": "Claire Lee"
@@ -928,14 +988,14 @@
                     },
                     {
                       "attributes": {
-                        "positions": ["Co-President"],
-                        "year": "2020"
+                        "graduated": "2020",
+                        "positions": ["Co-President"]
                       },
                       "children": [
                         {
                           "attributes": {
-                            "positions": ["AASU Rep"],
-                            "year": "2022"
+                            "graduated": "2022",
+                            "positions": ["AASU Rep"]
                           },
                           "children": [],
                           "name": "Brian Pan"

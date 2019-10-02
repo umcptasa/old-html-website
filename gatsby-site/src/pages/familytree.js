@@ -1,21 +1,21 @@
 import React from "react"
-import Tree from "react-d3-tree"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import MainContainer from "../components/main-container"
 
+import CenteredTree from "../components/centered-tree"
+
 const data = require("../json/familytree.json")
 
 const FamilyTree = () => (
-  <Layout title="Family Tree">
-    <MainContainer>
-      <div id="treeWrapper" style={{ width: "50em", height: "20em" }}>
-        <Tree data={data} />
-      </div>
+  <CenteredTree data={data} />
+  /* <Layout title="Family Tree">
+    <MainContainer className="gradient">
+      <Tree data={data} />
     </MainContainer>
     <Link to="/">Go back to the homepage</Link>
-  </Layout>
+  </Layout> */
 )
 
 export default FamilyTree
