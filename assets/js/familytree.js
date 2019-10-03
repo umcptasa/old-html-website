@@ -9,7 +9,7 @@ function makeTree(jsonPath) {
             data: data,
             element: document.getElementById("familytree"),
             orientation: "leftToRight",
-            heightWithoutMargins: window.innerHeight * 0.8,
+            heightWithoutMargins: $(window).innerHeight() * 0.8,
             allowZoom: true,
             allowFocus: $("#focusToggle").is(":checked"),
             minScale: minZoom,
@@ -28,7 +28,8 @@ function makeTree(jsonPath) {
             },
             nodeSettings: {
                 sizingMode: "nodeSize",
-                horizontalSpacing: "50"
+                horizontalSpacing: "50",
+                bodyBoxHeight: 100,
             }
         };
 

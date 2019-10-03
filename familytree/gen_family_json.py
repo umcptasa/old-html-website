@@ -10,14 +10,14 @@ from typing import List, Optional
 from math import floor
 
 DEBUG = False
-JSON_PATH = '../assets/json/familyTree.json'
+JSON_PATH = '../assets/json/revealFamilyTree.json'
 
 # If modifying these scopes, delete the file token.pickle.
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 
 # The ID and range of a sample spreadsheet.
 SPREADSHEET_ID = '1NZM7qljnp6zryL-H3C5VzEU28Gz9cWAs-SMslCu0LCY'
-RANGE_NAME = 'People!A2:N500'
+RANGE_NAME = 'Reveal!A2:N500'
 
 # Index of columns in spreadsheet
 NAME_INDEX = 0
@@ -37,6 +37,7 @@ class Attributes:
     year: str
     positions: List[str]
     description: str
+    familySize: int
 
     def __init__(self, row: Row) -> None:
         if(len(row) < POSITIONS_INDEX):
@@ -44,6 +45,7 @@ class Attributes:
             self.year = ""
             self.positions = [""]
             self.description = ""
+            self.familySize = 0
         else:
             self.year = row[YEAR_INDEX]
             self.id = row[0].replace(" ", "_") + "_" + self.year
@@ -53,9 +55,12 @@ class Attributes:
                 positions[i] = positions[i].strip()
 
             self.positions = positions
+            self.familySize = 0
+            self.description = row[POSITIONS_INDEX]
 
-            self.description = ("Year: %s\nPositions: %s" % (self.year, row[POSITIONS_INDEX]))
-
+    def setFamilySize(self, size: int) -> None:
+        self.familySize = size;
+        self.description = ("Year: %s\nFamily Size: %d\nPositions: %s" % (self.year, size, self.description))
 
 class Person:
     name: str
@@ -75,9 +80,8 @@ class Person:
         return self
 
     def addChild(self, person: Optional['Person']) -> None:
-        if person == None:
-            return
-        self.children.append(person)
+        if person != None:
+            self.children.append(person)
 
 
 def splitGenerations(values) -> Generations:
@@ -138,7 +142,7 @@ def search(generation: List[Row], name: str) -> Row:
     return []
 
 
-def processChild(generations: Generations, cur_gen: int, name: str) -> Person:
+def processChild(generations: Generations, cur_gen: int, name: str) -> Optional[Person]:
     '''
     Adds children depth first by recursively going through children
     and adding their children until there are no more children in that line
@@ -158,15 +162,20 @@ def processChild(generations: Generations, cur_gen: int, name: str) -> Person:
               (cur_gen, row[NAME_INDEX], row[YEAR_INDEX]))
 
     i = LITTLE_INDEX
+    family_size = 0
     while i < len(row):
         if(row[i] == ""):
             if DEBUG:
                 print('No more children')
         else:
-            child = processChild(generations, cur_gen + 1, row[i])
-            person.addChild(child)
+            child = processChild(generations, cur_gen + 1, row[i])           
+            if child != None:
+                person.addChild(child)
+                family_size += child.attributes.familySize
         i += 1
 
+    family_size += i - LITTLE_INDEX
+    person.attributes.setFamilySize(family_size)
     generations[cur_gen].remove(row)
     return person
 
@@ -224,14 +233,19 @@ def main():
             # Loop over children. Duplicated here since we don't need to search
             # for the founders
             i: int = LITTLE_INDEX
+            family_size = 0;
             while i < len(row):
                 if(row[i] == ""):
                     if DEBUG:
                         print('Empty')
                 else:
-                    child = processChild(generations, 1, row[i])
-                    founder.addChild(child)
+                    child = processChild(generations, 1, row[i])                  
+                    if child != None:
+                        founder.addChild(child)
+                        family_size += child.attributes.familySize
                 i += 1
+            family_size += i - LITTLE_INDEX
+            founder.attributes.setFamilySize(family_size)
             root.addChild(founder)
 
     # Writing to file
