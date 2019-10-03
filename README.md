@@ -49,6 +49,8 @@ We're also using [JSX](https://reactjs.org/docs/introducing-jsx.html) which is a
 
 Our react files reside in [`src/react/](src/react/). In this form, they aren't usable by the browser since we're using Babel and Flow syntax. So, we have to compile it and move it into the [`assets/components/`](assets/components) folder.
 
+Anytime you want to make changes to a components, do it in [`src/react/](src/react/)!
+
 Run the following to compile the files in `src/react` into usable JavaScript files in `assets/components`
 
 ```

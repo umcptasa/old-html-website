@@ -70,21 +70,36 @@ function Header(props) {
     href: "../pages/events.html"
   }, React.createElement("i", {
     className: "material-icons"
-  }, "insert_invitation"), " Events")), React.createElement("li", {
-    className: "nav-item"
+  }, "insert_invitation"), " ", "Events")), React.createElement("li", {
+    "class": "nav-item dropdown"
   }, React.createElement("a", {
+    "class": "nav-link dropdown-toggle",
+    "data-toggle": "dropdown",
+    href: "#"
+  }, React.createElement("i", {
+    className: "material-icons"
+  }, "wc"), " Big/Little", React.createElement("span", {
+    "class": "caret"
+  })), React.createElement("ul", {
+    "class": "dropdown-menu"
+  }, React.createElement("li", null, React.createElement("a", {
     className: "nav-link",
     href: "../pages/biglittle.html"
   }, React.createElement("i", {
     className: "material-icons"
-  }, "wc"), " Big/Little")), React.createElement("li", {
+  }, "wc"), " ", "Big/Little")), React.createElement("li", null, React.createElement("a", {
+    className: "nav-link",
+    href: "../pages/familytree.html"
+  }, React.createElement("i", {
+    className: "material-icons"
+  }, "account_tree"), " ", "Family Tree")))), React.createElement("li", {
     className: "nav-item"
   }, React.createElement("a", {
     className: "nav-link",
     href: "../pages/archive.html"
   }, React.createElement("i", {
     className: "material-icons"
-  }, "perm_media"), " Archive")), React.createElement("li", {
+  }, "perm_media"), " ", "Archive")), React.createElement("li", {
     className: "nav-item"
   }, React.createElement("a", {
     className: "nav-link",
