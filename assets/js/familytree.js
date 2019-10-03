@@ -1,4 +1,5 @@
-$.getJSON("https://api.myjson.com/bins/1bjyd5", function(data) {
+function makeTree(jsonPath) {
+    $.getJSON(jsonPath, function(data) {
     const minZoom = 0.5;
     const maxZoom = 2;
 
@@ -6,7 +7,9 @@ $.getJSON("https://api.myjson.com/bins/1bjyd5", function(data) {
         data: data,
         element: document.getElementById("familytree"),
         orientation: "leftToRight",
-        allowZoom: false,
+        heightWithoutMargins: window.innerHeight * 0.80,
+        allowZoom: true,
+        allowFocus: $("#focusToggle").is(":checked"),
         minScale: minZoom,
         maxScale: maxZoom,
         getId: function(data) {
@@ -23,14 +26,15 @@ $.getJSON("https://api.myjson.com/bins/1bjyd5", function(data) {
         },
         nodeSettings: {
             sizingMode: "nodeSize",
-            horizontalSpacing: "50"
-        }
+            horizontalSpacing: "50",
+        },
+        
     };
 
     const treePlugin = new d3.mitchTree.boxedTree(options).initialize();
 
-    $("#focusButton").bind("click", () => {
-        const value = document.getElementById("focusText").value.trim();
+    $("#searchButton").bind("click", () => {
+        const value = document.getElementById("searchText").value.trim();
         const nodeMatchingText = treePlugin.getNodes().find(function(node) {
             return node.data.name.includes(value);
         });
@@ -60,4 +64,10 @@ $.getJSON("https://api.myjson.com/bins/1bjyd5", function(data) {
         treePlugin.getZoomListener().scaleTo(treePlugin.getSvg(), zoomLevel);
         $("#zoomValue").text(zoomLevel * 100 + "%");
     });
+
+    $("#focusToggle").bind("click", () => {
+        treePlugin.setAllowFocus($("#focusToggle").is(":checked"));
+    })
 });
+
+}

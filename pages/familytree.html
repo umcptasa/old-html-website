@@ -157,35 +157,31 @@
                 </div>
             </div>
         </div>
+
         <div class="main main-raised">
             <div class="container">
-                <div class="form-group">
-                    <div class="col-md-8 ml-auto mr-auto text-center">
-                        <label for="focusText" class="control-label"
-                            >Search for:
-                        </label>
+                <div class="familyTreeSettings">
+                    <div class="searchSettings">
+                        <div id="searchForm" class="form-group searchItem">
+                            <label for="searchText" class="control-label"
+                                >Search for:
+                            </label>
 
-                        <input
-                            type="text"
-                            class="form-control"
-                            id="focusText"
-                        />
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="searchText"
+                            />
+                        </div>
+                        <button
+                            id="searchButton"
+                            type="submit"
+                            class="btn btn-round btn-sm btn-rose searchItem"
+                        >
+                            Search
+                        </button>
                     </div>
-                </div>
-
-                <div class="col-md-8 ml-auto mr-auto text-center">
-                    <button
-                        id="focusButton"
-                        type="submit"
-                        class="btn btn-round btn-sm btn-rose"
-                    >
-                        Search
-                    </button>
-                </div>
-
-                <br />
-                <div class="row">
-                    <div class="col-md-6 ml-auto mr-auto text-center">
+                    <div class="zoomSettings">
                         <i
                             id="zoomOutButton"
                             class="material-icons zoomButtons"
@@ -201,11 +197,17 @@
                             >zoom_in</i
                         >
                     </div>
+
+                    <div class="switch focusSettings">
+                        <label class="">
+                                <b>Hide siblings on click</b>
+                            <input id="focusToggle" type="checkbox" checked />
+                            <span class="lever"></span>
+                        </label>
+                    </div>
                 </div>
 
-                <div class="row card">
-                    <div id="familytree"></div>
-                </div>
+                <div id="familytree" class="card"></div>
             </div>
             <br />
         </div>
@@ -383,5 +385,8 @@
         <script src="../assets/components/header.react.js"></script>
 
         <script src="../assets/js/familytree.js"></script>
+        <script>
+            makeTree("https://api.myjson.com/bins/otk9b");
+        </script>
     </body>
 </html>
