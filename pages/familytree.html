@@ -211,30 +211,9 @@
             </div>
             <br />
         </div>
-        <footer class="footer footer-default">
-            <div class="container">
-                <nav class="float-left">
-                    <ul>
-                        <li>
-                            <a href="home.html">Home</a>
-                        </li>
-                        <li>
-                            <a href="about-us.html">About Us</a>
-                        </li>
-                        <li>
-                            <a href="contact-us.html">Contact Us</a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="copyright float-right">
-                    &copy;
-                    <script>
-                        document.write(new Date().getFullYear());
-                    </script>
-                    UMCP Taiwanese American Student Association
-                </div>
-            </div>
-        </footer>
+
+        <div id="react-footer"></div>
+        
         <!--   Core JS Files   -->
         <script
             src="../assets/js/core/jquery.min.js"
@@ -383,6 +362,7 @@
 
         <!-- Load our React components. -->
         <script src="../assets/components/header.react.js"></script>
+        <script src="../assets/components/footer.react.js"></script>
 
         <script>
             $.getScript("../assets/js/familytree.js")
