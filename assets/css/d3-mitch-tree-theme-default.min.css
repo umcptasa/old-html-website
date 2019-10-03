@@ -30,7 +30,7 @@
     stroke-width: 2px;
 }
 .mitch-d3-tree.boxed-tree.default .node.collapsed .body-group .body-box {
-    fill: lightgray;
+    fill: #a9bcd0;
 }
 
 .mitch-d3-tree.boxed-tree.default .node.collapsed .body-group .body-box:hover,
@@ -39,7 +39,7 @@
 }
 
 .mitch-d3-tree.boxed-tree.default .node.childless .body-group .body-box {
-    fill: transparent;
+    fill: lightslategray;
 }
 
 .mitch-d3-tree.boxed-tree.default .node.childless .body-group .body-box:hover {
@@ -56,6 +56,10 @@
 }
 
 .mitch-d3-tree.boxed-tree.default .node .body-group text {
+    fill: #3c4858;
+}
+
+.mitch-d3-tree.boxed-tree.default .node.childless .body-group text {
     fill: #3c4858;
 }
 .mitch-d3-tree.boxed-tree.default .node .title-group .title-box {
