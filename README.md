@@ -55,7 +55,7 @@ Anytime you want to make changes to a components, do it in [`src/react/](src/rea
 
 1. Install babel and flow with npm
 ```
-npm install -@babel/core @babel/cli @babel/preset-flow
+npm install --save-dev -@babel/core @babel/cli @babel/preset-flow
 ```
 2. Compile the files in `src/react` into usable JavaScript files in `assets/components` 
 ```
