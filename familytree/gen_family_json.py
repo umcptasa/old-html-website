@@ -17,7 +17,7 @@ SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 
 # The ID and range of a sample spreadsheet.
 SPREADSHEET_ID = '1NZM7qljnp6zryL-H3C5VzEU28Gz9cWAs-SMslCu0LCY'
-RANGE_NAME = 'People!A2:N200'
+RANGE_NAME = 'People!A2:N500'
 
 # Index of columns in spreadsheet
 NAME_INDEX = 0
@@ -74,7 +74,9 @@ class Person:
         self.attributes = Attributes(row)
         return self
 
-    def addChild(self, person: 'Person') -> None:
+    def addChild(self, person: Optional['Person']) -> None:
+        if person == None:
+            return
         self.children.append(person)
 
 
@@ -84,14 +86,23 @@ def splitGenerations(values) -> Generations:
     specified by the Generation column in the sheet
     '''
     data: Generations = []
+    if DEBUG: 
+        print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
+
     for row in values:
         generation: int = int(row[GENERATION_INDEX])
-
+        if DEBUG: 
+            print("Generation: %d Name: %s" % (generation, row[NAME_INDEX]))
         # If generation doesn't exist, make it!
         while len(data) <= generation:
+            if DEBUG:
+                print("\tNot enough generations. Current: %d, Needed: %d" % (len(data), generation))
             data.append([])
 
         data[generation].append(row)
+
+    if DEBUG: 
+        print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
 
     return data
 
@@ -136,6 +147,10 @@ def processChild(generations: Generations, cur_gen: int, name: str) -> Person:
     '''
 
     row: Row = search(generations[cur_gen], name)
+    if len(row) == 0:
+        print('Generation: %d Not found: %s' % (cur_gen, name))
+        return None;
+
     person = Person().fromRow(row)
     if DEBUG:
         print('***************************************')
@@ -191,6 +206,12 @@ def main():
         print('No data found.')
     else:
         generations: List[List[str]] = splitGenerations(values)
+
+        if DEBUG:
+            for gen in range(0, len(generations)):
+                print("_______Generation: %d_______" % (gen))
+                for row in generations[gen]:
+                    print(row[NAME_INDEX])
 
         # Iterate over all of the founders (generation 0)
         for row in generations[0]:
