@@ -188,7 +188,7 @@
                             style="vertical-align: text-bottom"
                             >zoom_out</i
                         >
-                        <b id="zoomValue"></b>
+                        <b id="zoomValue">75%</b>
 
                         <i
                             id="zoomInButton"
@@ -200,7 +200,7 @@
 
                     <div class="switch focusSettings">
                         <label class="">
-                                <b>Hide siblings on click</b>
+                            <b>Hide siblings on click</b>
                             <input id="focusToggle" type="checkbox" checked />
                             <span class="lever"></span>
                         </label>
@@ -384,9 +384,15 @@
         <!-- Load our React components. -->
         <script src="../assets/components/header.react.js"></script>
 
-        <script src="../assets/js/familytree.js"></script>
         <script>
-            makeTree("https://api.myjson.com/bins/otk9b");
+            $.getScript("../assets/js/familytree.js")
+                .done(function(script, textStatus) {
+                    makeTree("https://api.myjson.com/bins/otk9b");
+                })
+                .fail(function(jqxhr, settings, exception) {
+                    console.log("familytree.js not found");
+                });
+            
         </script>
     </body>
 </html>
