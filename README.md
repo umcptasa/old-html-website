@@ -45,11 +45,20 @@ Since we don't want to publish our secret key for the Sheets API, you'll have to
 
 # React
 React is a framework for making user interfaces. You can find the docs at https://reactjs.org/
-We're also using [JSX](https://reactjs.org/docs/introducing-jsx.html) which is a syntax extension for JavaScript. Our JSX src files lie in our src folder and have to be compiled into JavaScript that the browser can use. Run the follow to compile the files in `src/react` into usable JavaScript files in `assets/components`
+We're also using [JSX](https://reactjs.org/docs/introducing-jsx.html) which is a syntax extension for JavaScript. Our JSX src files lie in our src folder and have to be compiled into JavaScript that the browser can use. 
+
+Our react files reside in [`src/react/](src/react/). In this form, they aren't usable by the browser since we're using Babel and Flow syntax. So, we have to compile it and move it into the [`assets/components/`](assets/components) folder.
+
+Run the following to compile the files in `src/react` into usable JavaScript files in `assets/components`
 
 ```
 ./node_modules/.bin/babel src/react -d assets/components/
 ```
+
+## Why React?
+You can have the same components on multiple pages (ex: headers and footers), and you only have to change them in one place! 
+
+React also provides massive performance benefits if the entire application is made out of it. Unfortunately, we're not at that stage yet, but we can still make use of smaller components! 
 
 ## Flow
 Flow is a static type-checker for JavaScript. You can find the docs at https://flow.org/en/
