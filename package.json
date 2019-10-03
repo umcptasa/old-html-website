@@ -19,11 +19,7 @@
   },
   "homepage": "https://github.com/umcptasa/website#readme",
   "dependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-react-app": "^3.1.2",
-    "json-loader": "^0.5.7",
-    "react-d3-tree": "^1.15.3",
-    "requirejs": "^2.3.6"
+    "babel-cli": "^6.26.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.6.2",

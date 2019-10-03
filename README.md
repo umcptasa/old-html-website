@@ -51,8 +51,13 @@ Our react files reside in [`src/react/](src/react/). In this form, they aren't u
 
 Anytime you want to make changes to a components, do it in [`src/react/](src/react/)!
 
-Run the following to compile the files in `src/react` into usable JavaScript files in `assets/components`
 
+
+1. Install babel and flow with npm
+```
+npm install -@babel/core @babel/cli @babel/preset-flow
+```
+2. Compile the files in `src/react` into usable JavaScript files in `assets/components` 
 ```
 ./node_modules/.bin/babel src/react -d assets/components/
 ```
@@ -67,3 +72,4 @@ Flow is a static type-checker for JavaScript. You can find the docs at https://f
 
 To start flow run:
 ```npm run flow```
+
