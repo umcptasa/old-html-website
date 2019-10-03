@@ -1,3 +1,48 @@
-.mitch-d3-tree.boxed-tree .node.selected .body-group .body-box{cursor:inherit;pointer-events:none}.mitch-d3-tree.boxed-tree .node .d3plus-textBox,.mitch-d3-tree.boxed-tree .node .body-group .body-box,.mitch-d3-tree.boxed-tree .node .title-group .title-box{cursor:pointer}.mitch-d3-tree.boxed-tree .node .title-group .d3plus-textBox text{transform:translateY(0.15em)}.mitch-d3-tree.circle-tree .node.selected circle{cursor:inherit;pointer-events:none}.mitch-d3-tree.circle-tree .node circle{cursor:pointer;r:10}.mitch-d3-tree.circle-tree .node text{transition:0.3s linear}.mitch-d3-tree.circle-tree .node.childless text{transform:translate(13px, 0.35em);text-anchor:start}.mitch-d3-tree.circle-tree .node.collapsed text,.mitch-d3-tree.circle-tree .node.expanded text{transform:translate(-13px, 0.35em);text-anchor:end}.mitch-d3-tree.circle-tree .node.middle.collapsed text,.mitch-d3-tree.circle-tree .node.middle.expanded text{transform:translate(-13px, -8px)}
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('https://maxcdn.bootstrapcdn.com/font-awesome/latest/fonts/fontawesome-webfont.eot?v=4.7.0');
+    src: url('https://maxcdn.bootstrapcdn.com/font-awesome/latest/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('https://maxcdn.bootstrapcdn.com/font-awesome/latest/fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('https://maxcdn.bootstrapcdn.com/font-awesome/latest/fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('https://maxcdn.bootstrapcdn.com/font-awesome/latest/fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('https://maxcdn.bootstrapcdn.com/font-awesome/latest/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal
+}
+
+.mitch-d3-tree.boxed-tree .node.selected .body-group .body-box {
+    cursor: inherit;
+    pointer-events: none;
+}
+.mitch-d3-tree.boxed-tree .node .d3plus-textBox,
+.mitch-d3-tree.boxed-tree .node .body-group .body-box,
+.mitch-d3-tree.boxed-tree .node .title-group .title-box {
+    cursor: pointer;
+    border-radius: 100px;
+}
+.mitch-d3-tree.boxed-tree .node .title-group .d3plus-textBox text {
+    transform: translateY(0.15em);
+    font: normal normal normal 14px/1 FontAwesome;
+}
+.mitch-d3-tree.circle-tree .node.selected circle {
+    cursor: inherit;
+    pointer-events: none;
+}
+.mitch-d3-tree.circle-tree .node circle {
+    cursor: pointer;
+    r: 10;
+}
+.mitch-d3-tree.circle-tree .node text {
+    transition: 0.3s linear;
+}
+.mitch-d3-tree.circle-tree .node.childless text {
+    transform: translate(13px, 0.35em);
+    text-anchor: start;
+}
+.mitch-d3-tree.circle-tree .node.collapsed text,
+.mitch-d3-tree.circle-tree .node.expanded text {
+    transform: translate(-13px, 0.35em);
+    text-anchor: end;
+}
+.mitch-d3-tree.circle-tree .node.middle.collapsed text,
+.mitch-d3-tree.circle-tree .node.middle.expanded text {
+    transform: translate(-13px, -8px);
+}
 
 /*# sourceMappingURL=d3-mitch-tree.min.css.map */

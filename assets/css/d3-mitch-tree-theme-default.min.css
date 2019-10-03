@@ -1,3 +1,68 @@
-.mitch-d3-tree.boxed-tree.default .link{fill:none;stroke:#ccc;stroke-width:2px}.mitch-d3-tree.boxed-tree.default .node.collapsed .body-group .body-box{fill:lightsteelblue}.mitch-d3-tree.boxed-tree.default .node.selected .body-group .body-box{stroke:#00A2A3;stroke-width:2.5px}.mitch-d3-tree.boxed-tree.default .node .body-group .body-box{stroke:steelblue;fill:white;rx:6;ry:6}.mitch-d3-tree.boxed-tree.default .node .title-group .title-box{stroke:steelblue;fill:#4682B4;rx:10;ry:10}.mitch-d3-tree.boxed-tree.default .node .title-group text{fill:white}.mitch-d3-tree.circle-tree.default .link{fill:none;stroke:#ccc;stroke-width:2px}.mitch-d3-tree.circle-tree.default .node.collapsed circle{fill:lightsteelblue}.mitch-d3-tree.circle-tree.default .node.selected circle{stroke:#00A2A3;stroke-width:2.5px}.mitch-d3-tree.circle-tree.default .node circle{fill:#fff;stroke:steelblue;stroke-width:3px}.mitch-d3-tree.circle-tree.default .node text{font:12px sans-serif}
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('https://maxcdn.bootstrapcdn.com/font-awesome/latest/fonts/fontawesome-webfont.eot?v=4.7.0');
+    src: url('https://maxcdn.bootstrapcdn.com/font-awesome/latest/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('https://maxcdn.bootstrapcdn.com/font-awesome/latest/fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('https://maxcdn.bootstrapcdn.com/font-awesome/latest/fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('https://maxcdn.bootstrapcdn.com/font-awesome/latest/fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('https://maxcdn.bootstrapcdn.com/font-awesome/latest/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal
+}
+
+.mitch-d3-tree.boxed-tree.default {
+    cursor: grab;
+    font-family: FontAwesome;
+    word-wrap: break-word;
+}
+
+.mitch-d3-tree.boxed-tree.default .node {
+    cursor: pointer;
+}
+
+.mitch-d3-tree.boxed-tree.default .node.childless {
+    cursor: not-allowed;
+}
+
+.mitch-d3-tree.boxed-tree.default .node text{
+    font-size: 18px;
+}
+
+.mitch-d3-tree.boxed-tree.default .link {
+    fill: none;
+    stroke: #ccc;
+    stroke-width: 2px;
+}
+.mitch-d3-tree.boxed-tree.default .node.collapsed .body-group .body-box {
+    fill: lightgray;
+}
+
+.mitch-d3-tree.boxed-tree.default .node.collapsed .body-group .body-box:hover,
+.mitch-d3-tree.boxed-tree.default .node.expanded .body-group .body-box:hover {
+    fill: lightgreen;
+}
+
+.mitch-d3-tree.boxed-tree.default .node.childless .body-group .body-box {
+    fill: transparent;
+}
+
+.mitch-d3-tree.boxed-tree.default .node.childless .body-group .body-box:hover {
+    fill: pink;
+}
+
+.mitch-d3-tree.boxed-tree.default .node.selected .body-group .body-box {
+    stroke: green;
+    stroke-width: 2px;
+}
+.mitch-d3-tree.boxed-tree.default .node .body-group .body-box {
+    stroke: rgb(209, 174, 174);
+    fill: white;
+}
+
+.mitch-d3-tree.boxed-tree.default .node .body-group text {
+    fill: #3c4858;
+}
+.mitch-d3-tree.boxed-tree.default .node .title-group .title-box {
+    fill: #e91e63;
+}
+.mitch-d3-tree.boxed-tree.default .node .title-group text {
+    fill: white;
+}
 
 /*# sourceMappingURL=d3-mitch-tree-theme-default.min.css.map */

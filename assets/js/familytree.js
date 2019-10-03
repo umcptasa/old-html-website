@@ -1,9 +1,14 @@
-console.log("got here");
 $.getJSON("https://api.myjson.com/bins/1bjyd5", function(data) {
-    console.log("hello");
+    const minZoom = 0.5;
+    const maxZoom = 2;
+
     const options = {
         data: data,
-        element: document.getElementById("visualisation"),
+        element: document.getElementById("familytree"),
+        orientation: "leftToRight",
+        allowZoom: false,
+        minScale: minZoom,
+        maxScale: maxZoom,
         getId: function(data) {
             return data.attributes.id;
         },
@@ -16,19 +21,43 @@ $.getJSON("https://api.myjson.com/bins/1bjyd5", function(data) {
         getTitleDisplayText: function(data) {
             return data.name;
         },
-        orientation: "topToBottom"
+        nodeSettings: {
+            sizingMode: "nodeSize",
+            horizontalSpacing: "50"
+        }
     };
 
-    var treePlugin = new d3.mitchTree.boxedTree(options).initialize();
+    const treePlugin = new d3.mitchTree.boxedTree(options).initialize();
 
-    document
-        .getElementById("focusButton")
-        .addEventListener("click", function() {
-            var value = document.getElementById("focusText").value;
-            var nodeMatchingText = treePlugin.getNodes().find(function(node) {
-                return node.data.name == value;
-            });
-            if (nodeMatchingText) treePlugin.focusToNode(nodeMatchingText);
-            else if (value != null) treePlugin.focusToNode(value);
+    $("#focusButton").bind("click", () => {
+        const value = document.getElementById("focusText").value.trim();
+        const nodeMatchingText = treePlugin.getNodes().find(function(node) {
+            return node.data.name.includes(value);
         });
+        if (nodeMatchingText) treePlugin.focusToNode(nodeMatchingText);
+        else if (value != null)
+            treePlugin.focusToNode(value).replace(/ /g, "_");
+    });
+
+    let zoomLevel = 1;
+
+    $("#zoomInButton").bind("click", () => {
+        if (zoomLevel == maxZoom) {
+            return;
+        }
+
+        zoomLevel += 0.25;
+        treePlugin.getZoomListener().scaleTo(treePlugin.getSvg(), zoomLevel);
+        $("#zoomValue").text(zoomLevel * 100 + "%");
+    });
+
+    $("#zoomOutButton").bind("click", () => {
+        if (zoomLevel == minZoom) {
+            return;
+        }
+
+        zoomLevel -= 0.25;
+        treePlugin.getZoomListener().scaleTo(treePlugin.getSvg(), zoomLevel);
+        $("#zoomValue").text(zoomLevel * 100 + "%");
+    });
 });
