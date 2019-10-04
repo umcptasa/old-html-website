@@ -92,7 +92,12 @@ function Header(props) {
     href: "../pages/familytree.html"
   }, React.createElement("i", {
     className: "material-icons"
-  }, "account_tree"), " ", "Family Tree")))), React.createElement("li", {
+  }, "account_tree"), " ", "Family Tree")), React.createElement("li", null, React.createElement("a", {
+    className: "nav-link",
+    href: "../pages/familytreereveal.html"
+  }, React.createElement("i", {
+    className: "material-icons"
+  }, "people"), " ", "Big/Little Reveal")))), React.createElement("li", {
     className: "nav-item"
   }, React.createElement("a", {
     className: "nav-link",

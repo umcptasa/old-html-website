@@ -96,6 +96,17 @@ function Header(props: Props) {
                                         Family Tree
                                     </a>
                                 </li>
+                                <li>
+                                    <a
+                                        className="nav-link"
+                                        href="../pages/familytreereveal.html"
+                                    >
+                                        <i className="material-icons">
+                                            people
+                                        </i>{" "}
+                                        Big/Little Reveal
+                                    </a>
+                                </li>
                             </ul>
                         </li>
                         <li className="nav-item">
