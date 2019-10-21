@@ -59,8 +59,10 @@ class Attributes:
             self.description = row[POSITIONS_INDEX]
 
     def setFamilySize(self, size: int) -> None:
-        self.familySize = size;
-        self.description = ("Year: %s\nFamily Size: %d\nPositions: %s" % (self.year, size, self.description))
+        self.familySize = size
+        self.description = ("Year: %s\nFamily Size: %d\nPositions: %s" % (
+            self.year, size, self.description))
+
 
 class Person:
     name: str
@@ -90,22 +92,23 @@ def splitGenerations(values) -> Generations:
     specified by the Generation column in the sheet
     '''
     data: Generations = []
-    if DEBUG: 
+    if DEBUG:
         print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
 
     for row in values:
         generation: int = int(row[GENERATION_INDEX])
-        if DEBUG: 
+        if DEBUG:
             print("Generation: %d Name: %s" % (generation, row[NAME_INDEX]))
         # If generation doesn't exist, make it!
         while len(data) <= generation:
             if DEBUG:
-                print("\tNot enough generations. Current: %d, Needed: %d" % (len(data), generation))
+                print("\tNot enough generations. Current: %d, Needed: %d" %
+                      (len(data), generation))
             data.append([])
 
         data[generation].append(row)
 
-    if DEBUG: 
+    if DEBUG:
         print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
 
     return data
@@ -153,7 +156,7 @@ def processChild(generations: Generations, cur_gen: int, name: str) -> Optional[
     row: Row = search(generations[cur_gen], name)
     if len(row) == 0:
         print('Generation: %d Not found: %s' % (cur_gen, name))
-        return None;
+        return None
 
     person = Person().fromRow(row)
     if DEBUG:
@@ -168,7 +171,7 @@ def processChild(generations: Generations, cur_gen: int, name: str) -> Optional[
             if DEBUG:
                 print('No more children')
         else:
-            child = processChild(generations, cur_gen + 1, row[i])           
+            child = processChild(generations, cur_gen + 1, row[i])
             if child != None:
                 person.addChild(child)
                 family_size += child.attributes.familySize
@@ -233,13 +236,13 @@ def main():
             # Loop over children. Duplicated here since we don't need to search
             # for the founders
             i: int = LITTLE_INDEX
-            family_size = 0;
+            family_size = 0
             while i < len(row):
                 if(row[i] == ""):
                     if DEBUG:
                         print('Empty')
                 else:
-                    child = processChild(generations, 1, row[i])                  
+                    child = processChild(generations, 1, row[i])
                     if child != None:
                         founder.addChild(child)
                         family_size += child.attributes.familySize
